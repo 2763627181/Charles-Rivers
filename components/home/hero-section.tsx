@@ -73,15 +73,23 @@ export function HeroSection() {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
           className="relative mx-auto w-full max-w-xl"
+          style={{
+            maskImage:
+              "linear-gradient(to right, transparent, black 12%, black 88%, transparent), linear-gradient(to bottom, transparent, black 18%, black 82%, transparent)",
+            maskComposite: "intersect",
+            WebkitMaskImage:
+              "linear-gradient(to right, transparent, black 12%, black 88%, transparent), linear-gradient(to bottom, transparent, black 18%, black 82%, transparent)",
+            WebkitMaskComposite: "source-in",
+          }}
         >
-          <ParallaxImage mode="parallax" strength={22} className="aspect-[625/263] w-full drop-shadow-2xl">
+          <ParallaxImage mode="parallax" strength={22} className="aspect-[625/263] w-full">
             <Image
               src="/images/reference/home/hero-mice-trio.jpg"
               alt="Black, agouti and white laboratory mice used throughout this reference guide"
               fill
               sizes="(min-width: 1024px) 560px, 90vw"
               priority
-              className="object-contain"
+              className="object-cover"
             />
           </ParallaxImage>
         </motion.div>
