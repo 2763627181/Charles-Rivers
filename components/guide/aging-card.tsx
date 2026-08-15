@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { ImageOff } from "lucide-react";
+import { Milestone } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { VisuallyHidden } from "radix-ui";
 import { Badge } from "@/components/ui/badge";
@@ -39,8 +39,8 @@ export function AgingCard({ stage, delay = 0 }: { stage: AgingStage; delay?: num
               />
             </ParallaxImage>
           ) : (
-            <div className="flex size-full flex-col items-center justify-center gap-1.5 bg-light-blue text-corporate-blue">
-              <ImageOff className="size-5" aria-hidden="true" />
+            <div className="flex size-full flex-col items-center justify-center gap-1.5 bg-gradient-to-br from-light-blue to-white text-corporate-blue">
+              <Milestone className="size-6" aria-hidden="true" />
             </div>
           )}
         </div>
@@ -63,8 +63,8 @@ export function AgingCard({ stage, delay = 0 }: { stage: AgingStage; delay?: num
             {stage.image ? (
               <Image src={stage.image} alt={stage.label[locale]} fill sizes="512px" className="object-cover" />
             ) : (
-              <div className="flex size-full flex-col items-center justify-center gap-2 bg-light-blue text-corporate-blue">
-                <ImageOff className="size-8" aria-hidden="true" />
+              <div className="flex size-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-light-blue to-white text-corporate-blue">
+                <Milestone className="size-10" aria-hidden="true" />
               </div>
             )}
           </div>

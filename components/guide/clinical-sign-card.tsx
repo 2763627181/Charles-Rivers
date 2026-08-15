@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Accordion as AccordionPrimitive } from "radix-ui";
-import { ChevronDown, ImageOff } from "lucide-react";
+import { Activity, Brain, ChevronDown, Eye, HeartPulse, TriangleAlert } from "lucide-react";
 import { useDictionary, useLocale } from "@/lib/context/locale-context";
 import type { ClinicalSign } from "@/types/health";
 import { Badge } from "@/components/ui/badge";
@@ -17,10 +17,19 @@ const CATEGORY_ACCENT: Record<ClinicalSign["category"], string> = {
   emergency: "bg-red-50 text-danger",
 };
 
+const CATEGORY_ICON: Record<ClinicalSign["category"], typeof Activity> = {
+  "head-body": Activity,
+  eyes: Eye,
+  "repro-digest": HeartPulse,
+  neurological: Brain,
+  emergency: TriangleAlert,
+};
+
 export function ClinicalSignCard({ sign }: { sign: ClinicalSign }) {
   const locale = useLocale();
   const dictionary = useDictionary();
   const image = sign.images[0];
+  const CategoryIcon = CATEGORY_ICON[sign.category];
   const categoryLabel =
     sign.category === "head-body"
       ? dictionary.health.categories.headBody
@@ -53,8 +62,8 @@ export function ClinicalSignCard({ sign }: { sign: ClinicalSign }) {
                   <Image src={image} alt={sign.name[locale]} fill sizes="96px" className="object-cover" />
                 </ParallaxImage>
               ) : (
-                <div className="flex size-full items-center justify-center bg-light-blue text-corporate-blue">
-                  <ImageOff className="size-4" />
+                <div className={cn("flex size-full items-center justify-center", CATEGORY_ACCENT[sign.category])}>
+                  <CategoryIcon className="size-6" aria-hidden="true" />
                 </div>
               )}
             </div>

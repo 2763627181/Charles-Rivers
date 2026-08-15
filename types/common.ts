@@ -6,9 +6,9 @@
 export interface Bilingual {
   en: string;
   es: string;
+  pt: string;
   fr: string;
-  de: string;
-  nl: string;
+  it: string;
   zh: string;
 }
 

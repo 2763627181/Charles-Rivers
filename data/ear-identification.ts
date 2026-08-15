@@ -6,29 +6,29 @@ const img = (name: string) => `/images/reference/ear-id/${name}.jpg`;
 
 export const earChartImage = img("chart-1-16");
 
-const LABEL_CORRECT: Bilingual = { en: "Correct", es: "Correcto", fr: "Correct", de: "Korrekt", nl: "Correct", zh: "正确" };
+const LABEL_CORRECT: Bilingual = { en: "Correct", es: "Correcto", pt: "Correto", fr: "Correct", it: "Corretto", zh: "正确" };
 const LABEL_INCORRECT_ANGLE: Bilingual = {
   en: "Incorrect Angle",
   es: "Ángulo incorrecto",
+  pt: "Ângulo incorreto",
   fr: "Angle incorrect",
-  de: "Falscher Winkel",
-  nl: "Onjuiste hoek",
+  it: "Angolo errato",
   zh: "角度错误",
 };
 const LABEL_INCORRECT_AMOUNT: Bilingual = {
   en: "Incorrect Amount",
   es: "Cantidad incorrecta",
+  pt: "Quantidade incorreta",
   fr: "Quantité incorrecte",
-  de: "Falsche Menge",
-  nl: "Onjuiste hoeveelheid",
+  it: "Quantità errata",
   zh: "剪切量错误",
 };
 const LABEL_INCORRECT_DEPTH: Bilingual = {
   en: "Incorrect Depth",
   es: "Profundidad incorrecta",
+  pt: "Profundidade incorreta",
   fr: "Profondeur incorrecte",
-  de: "Falsche Tiefe",
-  nl: "Onjuiste diepte",
+  it: "Profondità errata",
   zh: "深度错误",
 };
 

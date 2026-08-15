@@ -1,7 +1,5 @@
-// Locales reflect countries where Charles River operates significant sites/communities:
-// en - US, UK, Canada · es - Spain · fr - France, Quebec (Canada), Belgium
-// de - Germany · nl - Netherlands, Belgium · zh - China
-export const locales = ["en", "es", "fr", "de", "nl", "zh"] as const;
+// Locales reflect the primary languages of Charles River's global audience.
+export const locales = ["en", "es", "pt", "fr", "it", "zh"] as const;
 export type Locale = (typeof locales)[number];
 export const defaultLocale: Locale = "en";
 export const localeCookieName = "cr_locale";
@@ -9,9 +7,9 @@ export const localeCookieName = "cr_locale";
 export const localeNames: Record<Locale, string> = {
   en: "English",
   es: "Español",
+  pt: "Português",
   fr: "Français",
-  de: "Deutsch",
-  nl: "Nederlands",
+  it: "Italiano",
   zh: "中文",
 };
 
