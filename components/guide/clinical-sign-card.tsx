@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { Accordion as AccordionPrimitive } from "radix-ui";
-import { Activity, Brain, ChevronDown, Eye, HeartPulse, TriangleAlert } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import { useDictionary, useLocale } from "@/lib/context/locale-context";
 import type { ClinicalSign } from "@/types/health";
 import { Badge } from "@/components/ui/badge";
@@ -17,19 +17,10 @@ const CATEGORY_ACCENT: Record<ClinicalSign["category"], string> = {
   emergency: "bg-red-50 text-danger",
 };
 
-const CATEGORY_ICON: Record<ClinicalSign["category"], typeof Activity> = {
-  "head-body": Activity,
-  eyes: Eye,
-  "repro-digest": HeartPulse,
-  neurological: Brain,
-  emergency: TriangleAlert,
-};
-
 export function ClinicalSignCard({ sign }: { sign: ClinicalSign }) {
   const locale = useLocale();
   const dictionary = useDictionary();
   const image = sign.images[0];
-  const CategoryIcon = CATEGORY_ICON[sign.category];
   const categoryLabel =
     sign.category === "head-body"
       ? dictionary.health.categories.headBody
@@ -56,17 +47,13 @@ export function ClinicalSignCard({ sign }: { sign: ClinicalSign }) {
               "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-medium-blue focus-visible:ring-inset"
             )}
           >
-            <div className="relative size-20 shrink-0 overflow-hidden rounded-lg bg-muted sm:size-24">
-              {image ? (
+            {image && (
+              <div className="relative size-20 shrink-0 overflow-hidden rounded-lg bg-muted sm:size-24">
                 <ParallaxImage className="absolute inset-0">
                   <Image src={image} alt={sign.name[locale]} fill sizes="96px" className="object-cover" />
                 </ParallaxImage>
-              ) : (
-                <div className={cn("flex size-full items-center justify-center", CATEGORY_ACCENT[sign.category])}>
-                  <CategoryIcon className="size-6" aria-hidden="true" />
-                </div>
-              )}
-            </div>
+              </div>
+            )}
 
             <div className="min-w-0 flex-1">
               <div className="flex items-start justify-between gap-2">
@@ -88,7 +75,7 @@ export function ClinicalSignCard({ sign }: { sign: ClinicalSign }) {
           </AccordionPrimitive.Trigger>
         </AccordionPrimitive.Header>
         <AccordionPrimitive.Content className="overflow-hidden data-open:animate-accordion-down data-closed:animate-accordion-up">
-          <p className="px-4 pb-4 text-sm leading-relaxed text-foreground sm:pl-[7.5rem]">
+          <p className={cn("px-4 pb-4 text-sm leading-relaxed text-foreground", image && "sm:pl-[7.5rem]")}>
             {sign.description[locale]}
           </p>
         </AccordionPrimitive.Content>

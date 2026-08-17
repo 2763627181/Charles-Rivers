@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import Image from "next/image";
-import { Milestone } from "lucide-react";
 import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { VisuallyHidden } from "radix-ui";
 import { Badge } from "@/components/ui/badge";
@@ -24,11 +23,12 @@ export function AgingCard({ stage, delay = 0 }: { stage: AgingStage; delay?: num
         className={cn(
           "group flex animate-in flex-col overflow-hidden rounded-xl border border-border bg-white text-left shadow-sm fade-in slide-in-from-bottom-2 duration-300 ease-out",
           "transition-[transform,box-shadow,border-color] hover:-translate-y-0.5 hover:border-medium-blue/50 hover:shadow-md",
-          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-medium-blue"
+          "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-medium-blue",
+          !stage.image && "justify-center"
         )}
       >
-        <div className="relative aspect-square w-full overflow-hidden bg-muted">
-          {stage.image ? (
+        {stage.image && (
+          <div className="relative aspect-square w-full overflow-hidden bg-muted">
             <ParallaxImage className="absolute inset-0">
               <Image
                 src={stage.image}
@@ -38,16 +38,12 @@ export function AgingCard({ stage, delay = 0 }: { stage: AgingStage; delay?: num
                 className="object-cover transition-transform duration-300 group-hover:scale-110"
               />
             </ParallaxImage>
-          ) : (
-            <div className="flex size-full flex-col items-center justify-center gap-1.5 bg-gradient-to-br from-light-blue to-white text-corporate-blue">
-              <Milestone className="size-6" aria-hidden="true" />
-            </div>
-          )}
-        </div>
+          </div>
+        )}
         <div className="flex flex-1 flex-col gap-1 p-3">
           <span className="text-sm font-semibold text-navy">{stage.label[locale]}</span>
           {stage.description && (
-            <span className="line-clamp-2 text-xs leading-relaxed text-muted-foreground">
+            <span className={cn("text-xs leading-relaxed text-muted-foreground", stage.image && "line-clamp-2")}>
               {stage.description[locale]}
             </span>
           )}
@@ -59,15 +55,11 @@ export function AgingCard({ stage, delay = 0 }: { stage: AgingStage; delay?: num
           <VisuallyHidden.Root>
             <DialogTitle>{stage.label[locale]}</DialogTitle>
           </VisuallyHidden.Root>
-          <div className="relative aspect-4/3 w-full bg-muted">
-            {stage.image ? (
+          {stage.image && (
+            <div className="relative aspect-4/3 w-full bg-muted">
               <Image src={stage.image} alt={stage.label[locale]} fill sizes="512px" className="object-cover" />
-            ) : (
-              <div className="flex size-full flex-col items-center justify-center gap-2 bg-gradient-to-br from-light-blue to-white text-corporate-blue">
-                <Milestone className="size-10" aria-hidden="true" />
-              </div>
-            )}
-          </div>
+            </div>
+          )}
           <div className="flex flex-col gap-2 p-5">
             <div className="flex items-center gap-2">
               <Badge className="border-transparent bg-corporate-blue text-white">{stage.label[locale]}</Badge>
