@@ -48,7 +48,8 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "L'animale ha l'addome retratto e la testa abbassata.",
       zh: "动物腹部收缩，头部低垂。",
     },
-    images: [],
+    // Supplementary reference photo (not from the original chart, which had no image for this sign).
+    images: [img("head-body", "kyphosis")],
   },
   {
     id: "ruffled-fur",

@@ -146,8 +146,18 @@ const DESC = {
   } as Bilingual,
 };
 
+// Birth, 3-week and 4-week photos are supplementary reference images supplied
+// separately (the original chart only photographed Days 1-14).
 export const mouseAging: AgingStage[] = [
-  { id: "mouse-birth", species: "mouse", order: 0, day: null, label: LABEL_BIRTH, description: DESC.bloodRed },
+  {
+    id: "mouse-birth",
+    species: "mouse",
+    order: 0,
+    day: null,
+    label: LABEL_BIRTH,
+    description: DESC.bloodRed,
+    image: "/images/reference/aging/mouse/birth.jpg",
+  },
   { id: "mouse-day-01", species: "mouse", order: 1, day: 1, label: dayLabel(1), description: DESC.lighterRedMilk, image: mouseImg(1) },
   { id: "mouse-day-02", species: "mouse", order: 2, day: 2, label: dayLabel(2), description: DESC.lighterEarsFlat, image: mouseImg(2) },
   { id: "mouse-day-03", species: "mouse", order: 3, day: 3, label: dayLabel(3), description: DESC.ears45, image: mouseImg(3) },
@@ -163,8 +173,24 @@ export const mouseAging: AgingStage[] = [
   { id: "mouse-day-12", species: "mouse", order: 12, day: 12, label: dayLabel(12), image: mouseImg(12) },
   { id: "mouse-day-13", species: "mouse", order: 13, day: 13, label: dayLabel(13), description: DESC.eyelidsOpenSlit, image: mouseImg(13) },
   { id: "mouse-day-14", species: "mouse", order: 14, day: 14, label: dayLabel(14), description: DESC.eyelidsOpenSlit, image: mouseImg(14) },
-  { id: "mouse-3-weeks", species: "mouse", order: 15, day: null, label: LABEL_3W, description: DESC.ovalOpening },
-  { id: "mouse-4-weeks", species: "mouse", order: 16, day: null, label: LABEL_4W, description: DESC.roundOpening },
+  {
+    id: "mouse-3-weeks",
+    species: "mouse",
+    order: 15,
+    day: null,
+    label: LABEL_3W,
+    description: DESC.ovalOpening,
+    image: "/images/reference/aging/mouse/3-weeks.jpg",
+  },
+  {
+    id: "mouse-4-weeks",
+    species: "mouse",
+    order: 16,
+    day: null,
+    label: LABEL_4W,
+    description: DESC.roundOpening,
+    image: "/images/reference/aging/mouse/4-weeks.jpg",
+  },
 ];
 
 export const ratAging: AgingStage[] = [
