@@ -8,7 +8,6 @@ import { useDictionary } from "@/lib/context/locale-context";
 import { localeCookieName, localeNames, type Locale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import { StaggerGroup, StaggerItem } from "@/components/motion/stagger";
-import { ParallaxImage } from "@/components/motion/parallax-image";
 
 function setLocaleCookie(locale: Locale) {
   document.cookie = `${localeCookieName}=${locale}; path=/; max-age=${60 * 60 * 24 * 365}; SameSite=Lax`;
@@ -72,18 +71,17 @@ export function HeroSection() {
           initial={reduceMotion ? undefined : { opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
-          className="relative mx-auto w-full max-w-xl"
+          className="mx-auto w-full max-w-xl overflow-hidden rounded-2xl border border-white/15 bg-white shadow-2xl"
         >
-          <ParallaxImage mode="parallax" strength={22} className="aspect-[944/628] w-full">
-            <Image
-              src="/images/reference/home/hero-mice-trio.png"
-              alt="Black, agouti and white laboratory mice used throughout this reference guide"
-              fill
-              sizes="(min-width: 1024px) 560px, 90vw"
-              priority
-              className="object-contain"
-            />
-          </ParallaxImage>
+          <Image
+            src="/images/reference/home/hero-mice-trio.jpg"
+            alt="Black, agouti and white laboratory mice used throughout this reference guide"
+            width={944}
+            height={628}
+            sizes="(min-width: 1024px) 560px, 90vw"
+            priority
+            className="h-auto w-full"
+          />
         </motion.div>
       </div>
     </section>
