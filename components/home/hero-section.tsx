@@ -74,7 +74,7 @@ export function HeroSection() {
           className="mx-auto w-full max-w-xl"
         >
           <Image
-            src="/images/reference/home/hero-mice-trio.png"
+            src="/images/reference/home/hero-mice-trio.jpg"
             alt="Black, agouti and white laboratory mice used throughout this reference guide"
             width={1536}
             height={1024}
