@@ -71,10 +71,10 @@ export function HeroSection() {
           initial={reduceMotion ? undefined : { opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: "easeOut", delay: 0.15 }}
-          className="mx-auto w-full max-w-xl overflow-hidden rounded-2xl shadow-2xl"
+          className="mx-auto w-full max-w-xl"
         >
           <Image
-            src="/images/reference/home/hero-mice-trio.jpg"
+            src="/images/reference/home/hero-mice-trio.png"
             alt="Black, agouti and white laboratory mice used throughout this reference guide"
             width={1536}
             height={1024}
