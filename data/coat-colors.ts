@@ -1,7 +1,7 @@
 import type { CoatColor } from "@/types/coat-colors";
 
 // Source: Charles River "Laboratory Mouse Identification & Reference Guide", Coat Colors tab.
-const img = (name: string) => `/images/reference/coat-colors/${name}.jpg`;
+const img = (name: string) => `/images/reference/coat-colors/${name}.png`;
 
 export const coatColors: CoatColor[] = [
   { id: "black", name: "Black", species: ["mouse", "rat"], image: img("black") },
