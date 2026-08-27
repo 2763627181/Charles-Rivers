@@ -1,11 +1,27 @@
 import type { ClinicalSign } from "@/types/health";
 
-// Source: Charles River "Laboratory Mouse Identification & Reference Guide", Health Issues tab
-// (Head/Body, Eyes, Repro/Digest, Neurological, Emergency).
+// Source: Charles River "Laboratory Mouse Identification & Reference Guide" (base set)
+// plus the official Charles River "Common Rodent Health Conditions" poster, used to
+// upgrade photos and add additional signs (Skin/Head, Eyes, Neurological, Emergency,
+// Urogenital/Gastrointestinal/Reproductive).
 const img = (category: string, name: string) => `/images/reference/health/${category}/${name}.jpg`;
 
 export const clinicalSigns: ClinicalSign[] = [
   // ---------------- HEAD / BODY ----------------
+  {
+    id: "thinness",
+    category: "head-body",
+    name: { en: "Thinness", es: "Delgadez", pt: "Magreza", fr: "Maigreur", it: "Magrezza", zh: "轻度消瘦" },
+    description: {
+      en: "15 - 20% loss in weight from baseline and/or BCS (Body Condition Score) 2/5. Subtle muscle wasting and mild prominence of spine. The condition is often observed with other clinical signs, such as lethargy and ruffled fur.",
+      es: "Pérdida de peso del 15-20% con respecto al valor inicial y/o BCS (puntuación de condición corporal) 2/5. Atrofia muscular sutil y leve prominencia de la columna vertebral. La afección se observa a menudo con otros signos clínicos, como letargo y pelaje despeinado.",
+      pt: "Perda de peso de 15-20% em relação ao valor basal e/ou BCS (Escore de Condição Corporal) 2/5. Perda muscular sutil e leve proeminência da coluna vertebral. A condição é frequentemente observada com outros sinais clínicos, como letargia e pelagem despenteada.",
+      fr: "Perte de poids de 15 à 20 % par rapport au poids initial et/ou BCS (score de condition corporelle) 2/5. Fonte musculaire discrète et légère proéminence de la colonne vertébrale. Cette condition est souvent observée avec d'autres signes cliniques, tels que la léthargie et le pelage hérissé.",
+      it: "Perdita di peso del 15-20% rispetto al basale e/o BCS (punteggio di condizione corporea) 2/5. Lieve atrofia muscolare e modesta prominenza della colonna vertebrale. La condizione è spesso osservata insieme ad altri segni clinici, come letargia e pelo arruffato.",
+      zh: "体重较基线下降15-20%和/或体况评分（BCS）为2/5。轻微肌肉萎缩，脊柱轻度突出。该情况常伴随其他临床体征，如嗜睡和被毛蓬乱。",
+    },
+    images: [img("head-body", "thinness")],
+  },
   {
     id: "emaciation",
     category: "head-body",
@@ -26,7 +42,7 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "Perdita di peso > 20% rispetto al basale e/o BCS 1/5. Notevole atrofia muscolare e prominenza della colonna vertebrale. La condizione è spesso osservata insieme ad altri segni clinici, come letargia e pelo arruffato.",
       zh: "体重较基线下降超过20%和/或体况评分（BCS）为1/5。肌肉明显萎缩，脊柱突出。该情况常伴随其他临床体征，如嗜睡和被毛蓬乱。",
     },
-    images: [img("head-body", "emaciation")],
+    images: [img("head-body", "emaciation-1"), img("head-body", "emaciation-2")],
   },
   {
     id: "kyphosis",
@@ -48,7 +64,7 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "L'animale ha l'addome retratto e la testa abbassata.",
       zh: "动物腹部收缩，头部低垂。",
     },
-    // Supplementary reference photo (not from the original chart, which had no image for this sign).
+    // Supplementary reference photo (not from either source chart, which had no image for this sign).
     images: [img("head-body", "kyphosis")],
   },
   {
@@ -114,7 +130,36 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "Infiammazione e/o lesione a tutto spessore della pelle che può presentarsi come erosioni o multiple piccole croste. Possono essere presenti ferite autoinflitte dovute al grattamento. La condizione colpisce tipicamente la metà anteriore del topo, incluso il muso e il dorso.",
       zh: "皮肤炎症和/或全层破损，可表现为糜烂或多处小结痂。可能伴有因抓挠造成的自伤性创伤。该情况通常影响小鼠身体前半部分，包括面部和背部。",
     },
-    images: [img("head-body", "dermatitis")],
+    images: [img("head-body", "dermatitis-1"), img("head-body", "dermatitis-2")],
+  },
+  {
+    id: "ulcerative-dermatitis",
+    category: "head-body",
+    name: {
+      en: "Ulcerative Dermatitis",
+      es: "Dermatitis Ulcerativa",
+      pt: "Dermatite Ulcerativa",
+      fr: "Dermatite Ulcéreuse",
+      it: "Dermatite Ulcerativa",
+      zh: "溃疡性皮炎",
+    },
+    subtitle: {
+      en: "skin lesion/wound",
+      es: "lesión/herida en la piel",
+      pt: "lesão/ferida na pele",
+      fr: "lésion/plaie cutanée",
+      it: "lesione/ferita cutanea",
+      zh: "皮肤病损/伤口",
+    },
+    description: {
+      en: "Inflammation with a fully-open lesion that is pink to red, with a moist/wet/weepy appearance. The condition is more severe than dermatitis.",
+      es: "Inflamación con una lesión completamente abierta de color rosado a rojo, con apariencia húmeda/mojada/exudativa. La afección es más grave que la dermatitis.",
+      pt: "Inflamação com uma lesão totalmente aberta que é rosada a vermelha, com aparência úmida/molhada/exsudativa. A condição é mais grave do que a dermatite.",
+      fr: "Inflammation avec une lésion totalement ouverte, de couleur rose à rouge, d'aspect humide/suintant. Cette condition est plus grave que la dermatite.",
+      it: "Infiammazione con una lesione completamente aperta di colore da rosa a rosso, con aspetto umido/essudante. La condizione è più grave della dermatite.",
+      zh: "炎症伴完全开放的病损，呈粉红色至红色，表面湿润/渗出。该情况比皮炎更严重。",
+    },
+    images: [img("head-body", "ulcerative-dermatitis-1"), img("head-body", "ulcerative-dermatitis-2")],
   },
   {
     id: "traumatic-wounds",
@@ -143,7 +188,7 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "Ferite puntiformi fino a confluenti, oppure risultato di una procedura sperimentale (ad es. irradiazione), più spesso localizzate alla base della coda in seguito a combattimenti. Sedi meno comuni includono il perineo (regione anogenitale) e le spalle. Sono osservate più comunemente nei maschi a causa dell'aggressività.",
       zh: "点状至融合性伤口，或由实验过程（如辐射）所致，最常见于因打斗而受伤的尾根部。较少见的部位包括会阴（肛殖区）和肩部。由于攻击性行为，这在雄性中更为常见。",
     },
-    images: [img("head-body", "traumatic-wounds")],
+    images: [img("head-body", "traumatic-wounds-1"), img("head-body", "traumatic-wounds-2")],
   },
   {
     id: "auricular-dermatitis",
@@ -172,7 +217,7 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "Infiammazione dell'orecchio esterno che può essere secondaria ad autotrauma (grattamento) dovuto a prurito. La condizione può essere secondaria a irritazione causata dai tag auricolari.",
       zh: "外耳炎症，可能继发于因瘙痒引起的自我抓挠性损伤。该情况也可能继发于耳标造成的刺激。",
     },
-    images: [img("head-body", "auricular-dermatitis")],
+    images: [img("head-body", "auricular-dermatitis-1"), img("head-body", "auricular-dermatitis-2")],
   },
   {
     id: "hyperkeratosis",
@@ -216,7 +261,56 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "Perdita di pelo. La toelettatura eccessiva è l'auto-strappo dei peli. Il barbering è un'alopecia dovuta alla toelettatura da parte dei compagni di gabbia, tipicamente (ma non esclusivamente) su tronco, muso e/o vibrisse. La pelle associata è normale.",
       zh: "毛发脱落。过度理毛是指自我拔毛的行为。同笼理毛是由笼舍同伴梳理造成的脱毛，通常（但不限于）发生在躯干、面部和/或触须部位。相关皮肤外观正常。",
     },
-    images: [img("head-body", "alopecia")],
+    images: [img("head-body", "alopecia-1"), img("head-body", "alopecia-2")],
+  },
+  {
+    id: "necrotic-tail",
+    category: "head-body",
+    name: { en: "Necrotic Tail", es: "Cola Necrótica", pt: "Cauda Necrótica", fr: "Nécrose de la Queue", it: "Necrosi della Coda", zh: "尾部坏死" },
+    description: {
+      en: "Death (necrosis) of a portion of the animal's tail. The condition is typically secondary to traumatic injury (e.g., closed in cage top, fight wounds) or injections that have injured the vascular supply to the tail.",
+      es: "Muerte (necrosis) de una porción de la cola del animal. La afección suele ser secundaria a una lesión traumática (p. ej., quedar atrapada en la tapa de la jaula, heridas de pelea) o a inyecciones que hayan dañado el suministro vascular de la cola.",
+      pt: "Morte (necrose) de uma parte da cauda do animal. A condição costuma ser secundária a lesão traumática (por exemplo, presa na tampa da gaiola, feridas de briga) ou a injeções que tenham lesionado o suprimento vascular da cauda.",
+      fr: "Mort (nécrose) d'une partie de la queue de l'animal. Cette condition est généralement secondaire à une blessure traumatique (p. ex. coincée dans le couvercle de la cage, blessures de combat) ou à des injections ayant endommagé l'apport vasculaire de la queue.",
+      it: "Morte (necrosi) di una porzione della coda dell'animale. La condizione è tipicamente secondaria a lesione traumatica (ad es. rimasta chiusa nel coperchio della gabbia, ferite da combattimento) o a iniezioni che hanno danneggiato l'apporto vascolare della coda.",
+      zh: "动物尾部部分组织坏死（死亡）。该情况通常继发于外伤（如被笼盖夹伤、打斗伤）或注射操作损伤了尾部的血液供应。",
+    },
+    images: [img("head-body", "necrotic-tail")],
+  },
+  {
+    id: "masses-or-swellings",
+    category: "head-body",
+    name: {
+      en: "Masses or Swellings",
+      es: "Masas o Hinchazones",
+      pt: "Massas ou Inchaços",
+      fr: "Masses ou Gonflements",
+      it: "Masse o Rigonfiamenti",
+      zh: "肿块或肿胀",
+    },
+    description: {
+      en: "These may present as solitary or multiple masses on any region of the body, or within the abdomen, or thorax. Often resulting from an underlying condition (e.g., neoplasia, abscess, hematoma, hernia, emphysema, pregnancy), that requires further investigation.",
+      es: "Pueden presentarse como masas solitarias o múltiples en cualquier región del cuerpo, o dentro del abdomen o el tórax. A menudo resultan de una afección subyacente (p. ej., neoplasia, absceso, hematoma, hernia, enfisema, embarazo) que requiere mayor investigación.",
+      pt: "Podem se apresentar como massas solitárias ou múltiplas em qualquer região do corpo, ou dentro do abdômen ou tórax. Frequentemente resultam de uma condição subjacente (por exemplo, neoplasia, abscesso, hematoma, hérnia, enfisema, gravidez) que requer investigação adicional.",
+      fr: "Elles peuvent se présenter sous forme de masses solitaires ou multiples sur n'importe quelle région du corps, ou à l'intérieur de l'abdomen ou du thorax. Résultant souvent d'une affection sous-jacente (p. ex. néoplasie, abcès, hématome, hernie, emphysème, gestation) nécessitant une investigation plus approfondie.",
+      it: "Possono presentarsi come masse singole o multiple in qualsiasi regione del corpo, o all'interno dell'addome o del torace. Spesso derivano da una condizione sottostante (ad es. neoplasia, ascesso, ematoma, ernia, enfisema, gravidanza) che richiede ulteriori indagini.",
+      zh: "可表现为身体任何部位、腹腔或胸腔内的单发或多发肿块。通常由潜在疾病所致（如肿瘤、脓肿、血肿、疝气、气肿、妊娠），需要进一步检查。",
+    },
+    images: [img("head-body", "masses-or-swellings-1"), img("head-body", "masses-or-swellings-2")],
+  },
+  {
+    id: "abscess",
+    category: "head-body",
+    name: { en: "Abscess", es: "Absceso", pt: "Abscesso", fr: "Abcès", it: "Ascesso", zh: "脓肿" },
+    description: {
+      en: "A walled-off collection of pus (dead inflammatory cells) that occurs secondary to bacterial infection. Abscesses are commonly seen on the head (retrobulbar/oral) or preputial gland, but may occur anywhere in the body. Furunculosis is a type of abscess that originates from deep infection of the hair follicles. It is often seen on the face/muzzle of nude mice.",
+      es: "Una acumulación encapsulada de pus (células inflamatorias muertas) que ocurre secundaria a una infección bacteriana. Los abscesos se observan comúnmente en la cabeza (retrobulbar/oral) o en la glándula prepucial, pero pueden ocurrir en cualquier parte del cuerpo. La forunculosis es un tipo de absceso que se origina por una infección profunda de los folículos pilosos. Se observa a menudo en la cara/hocico de los ratones desnudos.",
+      pt: "Uma coleção encapsulada de pus (células inflamatórias mortas) que ocorre secundária a infecção bacteriana. Abscessos são comumente observados na cabeça (retrobulbar/oral) ou na glândula prepucial, mas podem ocorrer em qualquer parte do corpo. A furunculose é um tipo de abscesso originado de infecção profunda dos folículos pilosos. É frequentemente observada na face/focinho de camundongos nude.",
+      fr: "Une accumulation encapsulée de pus (cellules inflammatoires mortes) survenant secondairement à une infection bactérienne. Les abcès sont couramment observés sur la tête (rétrobulbaire/buccal) ou la glande préputiale, mais peuvent survenir n'importe où sur le corps. La furonculose est un type d'abcès résultant d'une infection profonde des follicules pileux. Elle est souvent observée sur le visage/museau des souris nude.",
+      it: "Una raccolta incapsulata di pus (cellule infiammatorie morte) che si verifica secondariamente a infezione batterica. Gli ascessi sono comunemente osservati sulla testa (retrobulbare/orale) o sulla ghiandola prepuziale, ma possono verificarsi in qualsiasi parte del corpo. La foruncolosi è un tipo di ascesso che origina da un'infezione profonda dei follicoli piliferi. È spesso osservata sul muso dei topi nude.",
+      zh: "由细菌感染继发形成的局限性脓液（死亡炎性细胞）积聚。脓肿常见于头部（球后/口腔）或包皮腺，但可发生于身体任何部位。疖病是一种源于毛囊深部感染的脓肿类型，常见于裸鼠的面部/口鼻部。",
+    },
+    images: [img("head-body", "abscess-1"), img("head-body", "abscess-2")],
   },
 
   // ---------------- EYES ----------------
@@ -247,7 +341,29 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "Una condizione congenita in cui un animale nasce con occhi anormalmente piccoli (microftalmia) o assenti (anoftalmia); può colpire uno o entrambi gli occhi. Solitamente non sono presenti segni clinici, ma può verificarsi infezione a causa di drenaggio insufficiente. Comunemente osservata nei topi C57BL/6.",
       zh: "一种先天性疾病，动物出生时眼睛异常小（小眼症）或眼睛缺失（无眼症）；可累及单眼或双眼。通常无临床体征，但可能因引流不畅而发生感染。常见于C57BL/6品系小鼠。",
     },
-    images: [img("eyes", "microphthalmia-anophthalmia")],
+    images: [img("eyes", "microphthalmia-anophthalmia-1"), img("eyes", "microphthalmia-anophthalmia-2")],
+  },
+  {
+    id: "conjunctivitis",
+    category: "eyes",
+    name: { en: "Conjunctivitis", es: "Conjuntivitis", pt: "Conjuntivite", fr: "Conjonctivite", it: "Congiuntivite", zh: "结膜炎" },
+    subtitle: {
+      en: "pink eye",
+      es: "ojo rosado",
+      pt: "olho rosado",
+      fr: "œil rose",
+      it: "occhio rosa",
+      zh: "红眼病",
+    },
+    description: {
+      en: "Inflammation of the conjunctiva (whites of the eyes) that presents with swollen, pink tissue exposed from within the eyelids. The condition may result in ocular discharge.",
+      es: "Inflamación de la conjuntiva (el blanco de los ojos) que se presenta con tejido rosado e hinchado expuesto desde el interior de los párpados. La afección puede resultar en secreción ocular.",
+      pt: "Inflamação da conjuntiva (branco dos olhos) que se apresenta com tecido rosado e inchado exposto de dentro das pálpebras. A condição pode resultar em secreção ocular.",
+      fr: "Inflammation de la conjonctive (blanc des yeux) se présentant avec un tissu rose et enflé exposé depuis l'intérieur des paupières. Cette condition peut entraîner un écoulement oculaire.",
+      it: "Infiammazione della congiuntiva (bianco degli occhi) che si presenta con tessuto rosa e gonfio esposto dall'interno delle palpebre. La condizione può causare secrezione oculare.",
+      zh: "结膜（眼白部分）炎症，表现为眼睑内侧组织肿胀发红并外露。该情况可能导致眼部分泌物。",
+    },
+    images: [img("eyes", "conjunctivitis")],
   },
   {
     id: "blepharitis",
@@ -269,7 +385,7 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "Infiammazione della palpebra/e secondaria ad autotrauma (grattamento) o a infezione o irritazione da corpo estraneo nell'occhio.",
       zh: "眼睑炎症，继发于自我抓挠性损伤、感染或眼内异物刺激。",
     },
-    images: [img("eyes", "blepharitis")],
+    images: [img("eyes", "blepharitis-1"), img("eyes", "blepharitis-2")],
   },
   {
     id: "corneal-ulceration",
@@ -312,7 +428,7 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "Un bulbo oculare ingrandito. La condizione è la presentazione tipica del glaucoma.",
       zh: "眼球增大。该情况是青光眼的典型表现。",
     },
-    images: [img("eyes", "buphthalmos")],
+    images: [img("eyes", "buphthalmos-1"), img("eyes", "buphthalmos-2")],
   },
   {
     id: "exophthalmos",
@@ -334,7 +450,7 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "Un bulbo oculare che sporge verso l'esterno. La condizione è tipicamente secondaria a una massa occupante spazio (tumore o ascesso) presente dietro l'occhio.",
       zh: "眼球向外突出。该情况通常继发于眼球后方占位性肿块（肿瘤或脓肿）。",
     },
-    images: [img("eyes", "exophthalmos")],
+    images: [img("eyes", "exophthalmos-1"), img("eyes", "exophthalmos-2")],
   },
   {
     id: "cataract",
@@ -377,10 +493,10 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "Colorazione da porfirina (cromodacriorrea): pigmento rosso-bruno prodotto dalla ghiandola di Harder vicino all'occhio dei ratti. Si tratta di una normale secrezione; tuttavia, quando gli animali si sentono male o si toelettano meno, la porfirina può accumularsi e macchiare il pelo intorno a occhi, naso, bocca e sugli arti anteriori.",
       zh: "卟啉染色（红泪症）：由大鼠眼部附近的哈德氏腺分泌的红棕色色素。这是正常分泌物；但当动物感觉不适或减少理毛时，卟啉可能积聚并使眼睛、鼻子、嘴巴周围及前肢的被毛染色。",
     },
-    images: [img("eyes", "porphyrin-staining")],
+    images: [img("eyes", "porphyrin-staining-1"), img("eyes", "porphyrin-staining-2")],
   },
 
-  // ---------------- REPRODUCTIVE / DIGESTIVE ----------------
+  // ---------------- REPRODUCTIVE / DIGESTIVE (Urogenital / GI / Reproductive) ----------------
   {
     id: "diarrhea",
     category: "repro-digest",
@@ -459,6 +575,64 @@ export const clinicalSigns: ClinicalSign[] = [
     images: [img("repro-digest", "uterine-prolapse")],
   },
   {
+    id: "penile-prolapse",
+    category: "repro-digest",
+    name: {
+      en: "Penile Prolapse",
+      es: "Prolapso de Pene",
+      pt: "Prolapso Peniano",
+      fr: "Prolapsus Pénien",
+      it: "Prolasso del Pene",
+      zh: "阴茎脱垂",
+    },
+    subtitle: {
+      en: "(paraphimosis)",
+      es: "(parafimosis)",
+      pt: "(parafimose)",
+      fr: "(paraphimosis)",
+      it: "(parafimosi)",
+      zh: "（包茎嵌顿）",
+    },
+    description: {
+      en: "Protrusion of the penis due to failure to retract into the prepuce; presents as red, inflamed and swollen tissue. The condition may result in urinary blockage.",
+      es: "Protrusión del pene debido a la incapacidad de retraerse hacia el prepucio; se presenta como tejido rojo, inflamado e hinchado. La afección puede provocar obstrucción urinaria.",
+      pt: "Protrusão do pênis devido à incapacidade de retração para o prepúcio; apresenta-se como tecido vermelho, inflamado e inchado. A condição pode resultar em obstrução urinária.",
+      fr: "Protrusion du pénis due à l'incapacité de se rétracter dans le prépuce ; se présente sous forme de tissu rouge, enflammé et gonflé. Cette condition peut entraîner un blocage urinaire.",
+      it: "Protrusione del pene dovuta al mancato ritrarsi nel prepuzio; si presenta come tessuto rosso, infiammato e gonfio. La condizione può causare ostruzione urinaria.",
+      zh: "由于阴茎无法回缩至包皮内而脱出；表现为组织发红、炎症和肿胀。该情况可能导致尿路阻塞。",
+    },
+    images: [img("repro-digest", "penile-prolapse-1"), img("repro-digest", "penile-prolapse-2")],
+  },
+  {
+    id: "urine-staining",
+    category: "repro-digest",
+    name: {
+      en: "Urine Staining",
+      es: "Manchas de Orina",
+      pt: "Manchas de Urina",
+      fr: "Taches d'Urine",
+      it: "Macchie di Urina",
+      zh: "尿液染色",
+    },
+    subtitle: {
+      en: "urine scald",
+      es: "escaldadura por orina",
+      pt: "escaldadura por urina",
+      fr: "brûlure urinaire",
+      it: "scottatura da urina",
+      zh: "尿液灼伤",
+    },
+    description: {
+      en: "Stained/yellowed fur at the perineum (anogenital region) secondary to partial urinary blockage/urinary incontinence or animals with mobility issues.",
+      es: "Pelaje manchado/amarillento en el perineo (región anogenital) secundario a obstrucción urinaria parcial/incontinencia urinaria o en animales con problemas de movilidad.",
+      pt: "Pelagem manchada/amarelada no períneo (região anogenital) secundária a obstrução urinária parcial/incontinência urinária ou em animais com problemas de mobilidade.",
+      fr: "Pelage taché/jauni au niveau du périnée (région anogénitale) secondaire à un blocage urinaire partiel/une incontinence urinaire ou chez les animaux ayant des problèmes de mobilité.",
+      it: "Pelo macchiato/ingiallito a livello del perineo (regione anogenitale) secondario a ostruzione urinaria parziale/incontinenza urinaria o in animali con problemi di mobilità.",
+      zh: "会阴（肛殖区）被毛染色/发黄，继发于部分尿路阻塞/尿失禁或动物存在活动障碍。",
+    },
+    images: [img("repro-digest", "urine-staining-1"), img("repro-digest", "urine-staining-2")],
+  },
+  {
     id: "lameness",
     category: "repro-digest",
     name: { en: "Lameness", es: "Cojera", pt: "Claudicação", fr: "Boiterie", it: "Zoppia", zh: "跛行" },
@@ -521,7 +695,7 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "Gonfiore addominale dovuto ad ascite (liquido). La condizione è tipicamente secondaria a tumore o a malattia renale, epatica o cardiaca. Gli animali con addome disteso spesso presentano anche una scarsa condizione corporea. È importante distinguere la condizione dalla gravidanza.",
       zh: "由腹水（积液）引起的腹部肿胀。该情况通常继发于肿瘤或肾脏、肝脏或心脏疾病。腹部膨隆的动物通常体况也较差。需注意与妊娠相区分。",
     },
-    images: [img("repro-digest", "distended-abdomen")],
+    images: [img("repro-digest", "distended-abdomen-1"), img("repro-digest", "distended-abdomen-2")],
   },
   {
     id: "subcutaneous-edema",
@@ -550,7 +724,86 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "Ritenzione di liquido sotto la pelle. La condizione è spesso il risultato di malattia epatica, renale o cardiaca.",
       zh: "皮下积液潴留。该情况通常是肝脏、肾脏或心脏疾病所致。",
     },
-    images: [img("repro-digest", "subcutaneous-edema")],
+    images: [img("repro-digest", "subcutaneous-edema-1"), img("repro-digest", "subcutaneous-edema-2")],
+  },
+  {
+    id: "subcutaneous-emphysema",
+    category: "repro-digest",
+    name: {
+      en: "Subcutaneous Emphysema",
+      es: "Enfisema Subcutáneo",
+      pt: "Enfisema Subcutâneo",
+      fr: "Emphysème Sous-cutané",
+      it: "Enfisema Sottocutaneo",
+      zh: "皮下气肿",
+    },
+    subtitle: {
+      en: "emphysema = air",
+      es: "enfisema = aire",
+      pt: "enfisema = ar",
+      fr: "emphysème = air",
+      it: "enfisema = aria",
+      zh: "气肿=空气",
+    },
+    description: {
+      en: "Gas or air trapped beneath the skin. The condition is often secondary to trauma to lungs/respiratory tract (as seen with cancer or during gavage).",
+      es: "Gas o aire atrapado debajo de la piel. La afección suele ser secundaria a un traumatismo en los pulmones/tracto respiratorio (como se observa con el cáncer o durante la sonda gástrica).",
+      pt: "Gás ou ar retido sob a pele. A condição costuma ser secundária a trauma nos pulmões/trato respiratório (como visto com câncer ou durante a gavagem).",
+      fr: "Gaz ou air emprisonné sous la peau. Cette condition est souvent secondaire à un traumatisme des poumons/voies respiratoires (comme observé avec un cancer ou lors d'un gavage).",
+      it: "Gas o aria intrappolati sotto la pelle. La condizione è spesso secondaria a trauma ai polmoni/tratto respiratorio (come osservato con il cancro o durante il gavage).",
+      zh: "皮下积聚气体或空气。该情况通常继发于肺部/呼吸道创伤（如癌症或灌胃操作所致）。",
+    },
+    images: [img("repro-digest", "subcutaneous-emphysema-1"), img("repro-digest", "subcutaneous-emphysema-2")],
+  },
+  {
+    id: "jaundice",
+    category: "repro-digest",
+    name: { en: "Jaundice", es: "Ictericia", pt: "Icterícia", fr: "Jaunisse", it: "Ittero", zh: "黄疸" },
+    description: {
+      en: "Yellowing of the skin. The condition is secondary to excess bilirubin that is not adequately processed by the liver and/or gallbladder.",
+      es: "Amarillamiento de la piel. La afección es secundaria a un exceso de bilirrubina que no es procesada adecuadamente por el hígado y/o la vesícula biliar.",
+      pt: "Amarelamento da pele. A condição é secundária ao excesso de bilirrubina que não é adequadamente processada pelo fígado e/ou vesícula biliar.",
+      fr: "Jaunissement de la peau. Cette condition est secondaire à un excès de bilirubine qui n'est pas correctement traité par le foie et/ou la vésicule biliaire.",
+      it: "Ingiallimento della pelle. La condizione è secondaria a un eccesso di bilirubina non adeguatamente processata dal fegato e/o dalla cistifellea.",
+      zh: "皮肤发黄。该情况继发于肝脏和/或胆囊未能充分处理的过量胆红素。",
+    },
+    images: [img("repro-digest", "jaundice-1"), img("repro-digest", "jaundice-2")],
+  },
+  {
+    id: "cyanosis",
+    category: "repro-digest",
+    name: { en: "Cyanosis", es: "Cianosis", pt: "Cianose", fr: "Cyanose", it: "Cianosi", zh: "发绀" },
+    description: {
+      en: "Blue tinge to the skin resulting from insufficient oxygen delivery to tissues. The condition may be present with some types of anemia, blood loss, cancer, circulatory diseases, conditions causing blood vessel constriction, respiratory disease or other causes.",
+      es: "Tono azulado de la piel resultante de una entrega insuficiente de oxígeno a los tejidos. La afección puede presentarse con algunos tipos de anemia, pérdida de sangre, cáncer, enfermedades circulatorias, afecciones que causan constricción de los vasos sanguíneos, enfermedad respiratoria u otras causas.",
+      pt: "Tonalidade azulada da pele resultante de fornecimento insuficiente de oxigênio aos tecidos. A condição pode estar presente em alguns tipos de anemia, perda de sangue, câncer, doenças circulatórias, condições que causam constrição dos vasos sanguíneos, doença respiratória ou outras causas.",
+      fr: "Teinte bleutée de la peau résultant d'un apport insuffisant d'oxygène aux tissus. Cette condition peut être présente avec certains types d'anémie, une perte de sang, un cancer, des maladies circulatoires, des affections provoquant une constriction des vaisseaux sanguins, une maladie respiratoire ou d'autres causes.",
+      it: "Colorazione bluastra della pelle risultante da un insufficiente apporto di ossigeno ai tessuti. La condizione può essere presente con alcuni tipi di anemia, perdita di sangue, cancro, malattie circolatorie, condizioni che causano costrizione dei vasi sanguigni, malattia respiratoria o altre cause.",
+      zh: "由组织供氧不足导致的皮肤发青。该情况可能见于某些类型的贫血、失血、肿瘤、循环系统疾病、导致血管收缩的病症、呼吸系统疾病或其他原因。",
+    },
+    images: [img("repro-digest", "cyanosis")],
+  },
+  {
+    id: "pallor",
+    category: "repro-digest",
+    name: { en: "Pallor", es: "Palidez", pt: "Palidez", fr: "Pâleur", it: "Pallore", zh: "苍白" },
+    subtitle: {
+      en: "pale skin",
+      es: "piel pálida",
+      pt: "pele pálida",
+      fr: "peau pâle",
+      it: "pelle pallida",
+      zh: "皮肤苍白",
+    },
+    description: {
+      en: "Pale color of the skin, caused by reduced red blood cells in circulation. In haired mice, pallor is typically seen on the ears and tail. Pallor is often indicative of anemia, a clinical sign caused by blood loss, cancer, kidney failure and immune system disorders.",
+      es: "Color pálido de la piel, causado por una reducción de los glóbulos rojos en circulación. En ratones con pelo, la palidez se observa típicamente en las orejas y la cola. La palidez suele ser indicativa de anemia, un signo clínico causado por pérdida de sangre, cáncer, insuficiencia renal y trastornos del sistema inmunitario.",
+      pt: "Cor pálida da pele, causada pela redução de glóbulos vermelhos em circulação. Em camundongos com pelo, a palidez é tipicamente observada nas orelhas e na cauda. A palidez costuma ser indicativa de anemia, um sinal clínico causado por perda de sangue, câncer, insuficiência renal e distúrbios do sistema imunológico.",
+      fr: "Couleur pâle de la peau, causée par une réduction des globules rouges en circulation. Chez les souris à poils, la pâleur est généralement observée sur les oreilles et la queue. La pâleur est souvent indicative d'anémie, un signe clinique causé par une perte de sang, un cancer, une insuffisance rénale et des troubles du système immunitaire.",
+      it: "Colore pallido della pelle, causato da una riduzione dei globuli rossi in circolazione. Nei topi con pelo, il pallore è tipicamente osservato su orecchie e coda. Il pallore è spesso indicativo di anemia, un segno clinico causato da perdita di sangue, cancro, insufficienza renale e disturbi del sistema immunitario.",
+      zh: "皮肤颜色苍白，由循环血液中红细胞减少所致。有毛小鼠的苍白通常见于耳朵和尾巴。苍白常提示贫血，这是由失血、肿瘤、肾衰竭和免疫系统紊乱引起的临床体征。",
+    },
+    images: [img("repro-digest", "pallor-1"), img("repro-digest", "pallor-2")],
   },
 
   // ---------------- NEUROLOGICAL ----------------
@@ -639,7 +892,7 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "La testa è inclinata da un lato. L'animale può camminare o girare in tondo nella direzione dell'inclinazione, o rotolare se grave. La condizione è spesso secondaria a infezione dell'orecchio, tumore o malattia vestibolare (orecchio interno). Può essere idiopatica (causa sconosciuta).",
       zh: "头部向一侧歪斜。动物可能朝歪斜方向行走或转圈，严重时可能翻滚。该情况通常继发于耳部感染、肿瘤或前庭（内耳）疾病，也可能为特发性（病因不明）。",
     },
-    images: [img("neurological", "head-tilt")],
+    images: [img("neurological", "head-tilt-1"), img("neurological", "head-tilt-2")],
   },
 
   // ---------------- EMERGENCY ----------------
@@ -685,7 +938,7 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "Sforzo respiratorio grave e aumentato in cui l'animale boccheggia per l'aria e mostra respirazione a bocca aperta. La condizione è secondaria a liquido o una massa all'interno della cavità toracica o addominale, spesso dovuta a un tumore sottostante, infezione o malattia polmonare/cardiaca.",
       zh: "严重的呼吸努力增加，动物张口喘气。该情况继发于胸腔或腹腔内的积液或肿块，常由潜在肿瘤、感染或肺部/心脏疾病所致。",
     },
-    images: [img("emergency", "dyspnea")],
+    images: [img("emergency", "dyspnea-1"), img("emergency", "dyspnea-2")],
   },
   {
     id: "hyperpnea",
@@ -721,7 +974,21 @@ export const clinicalSigns: ClinicalSign[] = [
       it: "Fallimento o difficoltà nel parto dei cuccioli da parte della madre. I cuccioli non riescono a passare normalmente attraverso il canale vaginale. La madre può apparire letargica, disidratata.",
       zh: "母鼠分娩失败或困难，幼崽无法正常通过产道。母鼠可能表现为嗜睡、脱水。",
     },
-    images: [img("emergency", "dystocia")],
+    images: [img("emergency", "dystocia-1"), img("emergency", "dystocia-2")],
+  },
+  {
+    id: "seizure",
+    category: "emergency",
+    name: { en: "Seizure", es: "Convulsión", pt: "Convulsão", fr: "Crise Convulsive", it: "Crisi Convulsiva", zh: "癫痫发作" },
+    description: {
+      en: "Abnormal electrical activity of the brain that results in abnormal behaviors/movements. Some animals may lie on their sides, paddling or rhythmically contracting their limbs. Animals may extend or contract their muscles, holding them in position.",
+      es: "Actividad eléctrica anormal del cerebro que resulta en comportamientos/movimientos anormales. Algunos animales pueden acostarse de lado, pedaleando o contrayendo rítmicamente sus extremidades. Los animales pueden extender o contraer sus músculos, manteniéndolos en posición.",
+      pt: "Atividade elétrica anormal do cérebro que resulta em comportamentos/movimentos anormais. Alguns animais podem deitar de lado, pedalando ou contraindo ritmicamente os membros. Os animais podem estender ou contrair os músculos, mantendo-os em posição.",
+      fr: "Activité électrique anormale du cerveau entraînant des comportements/mouvements anormaux. Certains animaux peuvent se coucher sur le côté, pédaler ou contracter rythmiquement leurs membres. Les animaux peuvent étendre ou contracter leurs muscles, les maintenant en position.",
+      it: "Attività elettrica anomala del cervello che provoca comportamenti/movimenti anomali. Alcuni animali possono giacere su un fianco, pedalando o contraendo ritmicamente gli arti. Gli animali possono estendere o contrarre i muscoli, mantenendoli in posizione.",
+      zh: "脑部异常电活动导致异常行为/动作。部分动物可能侧卧，出现划水样或节律性肢体收缩。动物可能伸展或收缩肌肉并维持该姿势。",
+    },
+    images: [img("emergency", "seizure")],
   },
 ];
 

@@ -47,7 +47,7 @@ export function CoatColorCard({ color }: { color: CoatColor }) {
             <span className="flex size-9 scale-75 items-center justify-center rounded-full bg-white/90 text-navy opacity-0 shadow-md transition-all duration-200 group-hover:scale-100 group-hover:opacity-100">
               <Maximize2 className="size-4" aria-hidden="true" />
             </span>
-          </div>
+          </div>          
         </div>
       </ImageLightbox>
       <div className="flex flex-1 flex-col gap-1.5 p-4">
