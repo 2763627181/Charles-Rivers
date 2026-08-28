@@ -11,7 +11,6 @@ export const fr: Dictionary = {
     earId: "ID Oreille",
     health: "Santé",
     sexing: "Sexage",
-    reference: "Référence",
     menu: "Menu",
     backToGuide: "Retour au guide",
     identificationGroup: "Identification",
@@ -58,9 +57,6 @@ export const fr: Dictionary = {
     description:
       "Ce guide est une référence visuelle et informative conçue pour aider les techniciens dans l'identification des souris de laboratoire.",
     exploreCta: "Explorer",
-    referenceCta: "Parcourir le matériel de référence original",
-    referenceTitle: "Référence Originale",
-    referenceDescription: "Captures d'écran complètes du guide d'origine, conservées pour vérification.",
   },
   species: {
     chooseSpecies: "Choisir l'espèce",
@@ -148,11 +144,6 @@ export const fr: Dictionary = {
     testesDesc: "Chez les mâles, les testicules peuvent être visibles ou palpables dans la zone scrotale à mesure que les animaux mûrissent.",
     nipples: "Mamelons",
     nipplesDesc: "Les mamelons inguinaux sont visibles chez les femelles et absents chez les mâles.",
-  },
-  reference: {
-    title: "Référence Originale",
-    subtitle: "Captures d'écran complètes du guide original de Charles River, conservées pour référence.",
-    openOriginal: "Ouvrir en taille réelle",
   },
   search: {
     placeholder: "Rechercher dans le guide de laboratoire...",

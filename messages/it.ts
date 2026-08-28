@@ -11,7 +11,6 @@ export const it: Dictionary = {
     earId: "ID Orecchio",
     health: "Salute",
     sexing: "Sessaggio",
-    reference: "Riferimento",
     menu: "Menu",
     backToGuide: "Torna alla Guida",
     identificationGroup: "Identificazione",
@@ -58,9 +57,6 @@ export const it: Dictionary = {
     description:
       "Questa guida è un riferimento visivo e informativo progettato per supportare i tecnici nell'identificazione dei topi da laboratorio.",
     exploreCta: "Esplora",
-    referenceCta: "Sfoglia il materiale di riferimento originale",
-    referenceTitle: "Riferimento Originale",
-    referenceDescription: "Screenshot completi della guida originale, mantenuti disponibili per il controllo incrociato.",
   },
   species: {
     chooseSpecies: "Scegli specie",
@@ -148,11 +144,6 @@ export const it: Dictionary = {
     testesDesc: "Nei maschi, i testicoli possono diventare visibili o palpabili nell'area scrotale man mano che gli animali maturano.",
     nipples: "Capezzoli",
     nipplesDesc: "I capezzoli inguinali sono visibili nelle femmine e non sono presenti nei maschi.",
-  },
-  reference: {
-    title: "Riferimento Originale",
-    subtitle: "Screenshot completi della guida originale Charles River, conservati per riferimento.",
-    openOriginal: "Apri a grandezza naturale",
   },
   search: {
     placeholder: "Cerca nella guida di laboratorio...",

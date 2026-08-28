@@ -11,7 +11,6 @@ export const en: Dictionary = {
     earId: "Ear ID",
     health: "Health",
     sexing: "Sexing",
-    reference: "Reference",
     menu: "Menu",
     backToGuide: "Back to Guide",
     identificationGroup: "Identification",
@@ -58,9 +57,6 @@ export const en: Dictionary = {
     description:
       "This guide is a visual and informational reference designed to support technicians in the identification of laboratory mice.",
     exploreCta: "Explore",
-    referenceCta: "Browse original reference material",
-    referenceTitle: "Original Reference",
-    referenceDescription: "Full screenshots of the legacy guide, kept available for cross-checking.",
   },
   species: {
     chooseSpecies: "Choose species",
@@ -148,11 +144,6 @@ export const en: Dictionary = {
     testesDesc: "In males, testes may be visible or palpable within the scrotal area as animals mature.",
     nipples: "Nipples",
     nipplesDesc: "Inguinal nipples are visible in females and are not present in males.",
-  },
-  reference: {
-    title: "Original Reference",
-    subtitle: "Full screenshots of the legacy Charles River guide, preserved for reference.",
-    openOriginal: "Open full size",
   },
   search: {
     placeholder: "Search the laboratory guide...",

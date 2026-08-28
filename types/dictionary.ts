@@ -9,7 +9,6 @@ export interface Dictionary {
     earId: string;
     health: string;
     sexing: string;
-    reference: string;
     menu: string;
     backToGuide: string;
     identificationGroup: string;
@@ -39,9 +38,6 @@ export interface Dictionary {
     title: string;
     description: string;
     exploreCta: string;
-    referenceCta: string;
-    referenceTitle: string;
-    referenceDescription: string;
   };
   species: {
     chooseSpecies: string;
@@ -119,11 +115,6 @@ export interface Dictionary {
     testesDesc: string;
     nipples: string;
     nipplesDesc: string;
-  };
-  reference: {
-    title: string;
-    subtitle: string;
-    openOriginal: string;
   };
   search: {
     placeholder: string;

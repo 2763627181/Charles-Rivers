@@ -11,7 +11,6 @@ export const es: Dictionary = {
     earId: "ID Oreja",
     health: "Salud",
     sexing: "Sexado",
-    reference: "Referencia",
     menu: "Menú",
     backToGuide: "Volver a la Guía",
     identificationGroup: "Identificación",
@@ -58,9 +57,6 @@ export const es: Dictionary = {
     description:
       "Esta guía es una referencia visual e informativa diseñada para apoyar a los técnicos en la identificación de ratones de laboratorio.",
     exploreCta: "Explorar",
-    referenceCta: "Ver material de referencia original",
-    referenceTitle: "Referencia Original",
-    referenceDescription: "Capturas completas de la guía original, disponibles para consulta cruzada.",
   },
   species: {
     chooseSpecies: "Elige la especie",
@@ -148,11 +144,6 @@ export const es: Dictionary = {
     testesDesc: "En los machos, los testículos pueden ser visibles o palpables en el área escrotal a medida que maduran.",
     nipples: "Pezones",
     nipplesDesc: "Los pezones inguinales son visibles en las hembras y no están presentes en los machos.",
-  },
-  reference: {
-    title: "Referencia Original",
-    subtitle: "Capturas completas de la guía original de Charles River, conservadas como referencia.",
-    openOriginal: "Abrir tamaño completo",
   },
   search: {
     placeholder: "Buscar en la guía de laboratorio...",

@@ -83,16 +83,6 @@ export function MobileNav() {
                 );
               })}
           </div>
-
-          <div className="mt-3 border-t border-border pt-3">
-            <Link
-              href={`/${locale}/guide/reference`}
-              onClick={() => setOpen(false)}
-              className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-light-blue hover:text-corporate-blue"
-            >
-              {dictionary.nav.reference}
-            </Link>
-          </div>
         </nav>
       </SheetContent>
     </Sheet>

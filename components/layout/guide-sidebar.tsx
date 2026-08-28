@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { LayoutGrid, BookImage } from "lucide-react";
+import { LayoutGrid } from "lucide-react";
 import { primaryNav, healthCategoryNav } from "@/data/navigation";
 import { useDictionary, useLocale } from "@/lib/context/locale-context";
 import { getIcon } from "@/lib/icons";
@@ -100,15 +100,6 @@ export function GuideSidebar() {
               />
             );
           })}
-        </div>
-
-        <div className="mt-auto flex flex-col gap-1 border-t border-border pt-4">
-          <SidebarLink
-            href={`${base}/guide/reference`}
-            label={dictionary.nav.reference}
-            icon={BookImage}
-            active={pathname === `${base}/guide/reference`}
-          />
         </div>
       </nav>
     </aside>

@@ -11,7 +11,6 @@ export const zh: Dictionary = {
     earId: "耳标识别",
     health: "健康",
     sexing: "性别鉴定",
-    reference: "参考资料",
     menu: "菜单",
     backToGuide: "返回指南",
     identificationGroup: "识别",
@@ -56,9 +55,6 @@ export const zh: Dictionary = {
     title: "实验室识别指南",
     description: "本指南是一份可视化信息参考资料，旨在帮助技术人员识别实验小鼠。",
     exploreCta: "浏览",
-    referenceCta: "浏览原始参考资料",
-    referenceTitle: "原始参考资料",
-    referenceDescription: "保留原指南的完整截图，供交叉核对使用。",
   },
   species: {
     chooseSpecies: "选择物种",
@@ -142,11 +138,6 @@ export const zh: Dictionary = {
     testesDesc: "随着动物发育成熟，雄性的睾丸可能在阴囊区域可见或可触及。",
     nipples: "乳头",
     nipplesDesc: "腹股沟乳头在雌性中可见，雄性中不存在。",
-  },
-  reference: {
-    title: "原始参考资料",
-    subtitle: "保留的查尔斯河原指南完整截图，供参考使用。",
-    openOriginal: "查看原始大小",
   },
   search: {
     placeholder: "搜索实验室指南...",

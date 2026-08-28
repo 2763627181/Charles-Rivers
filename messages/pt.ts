@@ -11,7 +11,6 @@ export const pt: Dictionary = {
     earId: "ID da Orelha",
     health: "Saúde",
     sexing: "Sexagem",
-    reference: "Referência",
     menu: "Menu",
     backToGuide: "Voltar ao Guia",
     identificationGroup: "Identificação",
@@ -58,9 +57,6 @@ export const pt: Dictionary = {
     description:
       "Este guia é uma referência visual e informativa concebida para apoiar os técnicos na identificação de ratos de laboratório.",
     exploreCta: "Explorar",
-    referenceCta: "Ver material de referência original",
-    referenceTitle: "Referência Original",
-    referenceDescription: "Capturas de tela completas do guia original, mantidas disponíveis para verificação cruzada.",
   },
   species: {
     chooseSpecies: "Escolher espécie",
@@ -148,11 +144,6 @@ export const pt: Dictionary = {
     testesDesc: "Nos machos, os testículos podem ficar visíveis ou palpáveis na região escrotal à medida que os animais amadurecem.",
     nipples: "Mamilos",
     nipplesDesc: "Os mamilos inguinais são visíveis nas fêmeas e não estão presentes nos machos.",
-  },
-  reference: {
-    title: "Referência Original",
-    subtitle: "Capturas de tela completas do guia original da Charles River, preservadas para referência.",
-    openOriginal: "Abrir em tamanho real",
   },
   search: {
     placeholder: "Pesquisar no guia de laboratório...",

@@ -1,5 +1,4 @@
-import { CalendarClock, Palette, ScanLine, Stethoscope, Users, BookImage, ArrowRight } from "lucide-react";
-import Link from "next/link";
+import { CalendarClock, Palette, ScanLine, Stethoscope, Users } from "lucide-react";
 import { SectionHeader } from "@/components/guide/section-header";
 import { GuideCard } from "@/components/guide/guide-card";
 import type { Locale } from "@/lib/i18n";
@@ -60,25 +59,6 @@ export function GuideDashboard({ locale, dictionary }: { locale: Locale; diction
           <GuideCard key={card.href} {...card} cta={dictionary.guideDashboard.exploreCta} delay={i * 0.05} />
         ))}
       </div>
-
-      <Link
-        href={`${base}/reference`}
-        className="group flex flex-col items-start justify-between gap-4 rounded-2xl border border-dashed border-border bg-white p-6 transition-colors hover:border-medium-blue/50 sm:flex-row sm:items-center"
-      >
-        <div className="flex items-center gap-4">
-          <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-muted text-muted-foreground">
-            <BookImage className="size-5" aria-hidden="true" />
-          </span>
-          <div>
-            <p className="font-semibold text-navy">{dictionary.guideDashboard.referenceTitle}</p>
-            <p className="text-sm text-muted-foreground">{dictionary.guideDashboard.referenceDescription}</p>
-          </div>
-        </div>
-        <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-corporate-blue">
-          {dictionary.guideDashboard.referenceCta}
-          <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-        </span>
-      </Link>
     </div>
   );
 }
