@@ -23,7 +23,7 @@ export function QuickAccess() {
       icon: Palette,
       title: dictionary.cards.coatColors.title,
       description: dictionary.cards.coatColors.description,
-      image: "/images/reference/coat-colors/black.jpg",
+      image: "/images/reference/coat-colors/coat-colors-collage.jpg",
     },
     {
       href: `${base}/ear-identification`,
