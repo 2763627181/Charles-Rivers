@@ -16,10 +16,6 @@ const dayLabel = (n: number): Bilingual => ({
   zh: `第${n}天`,
 });
 
-const LABEL_BIRTH: Bilingual = { en: "Birth", es: "Nacimiento", pt: "Nascimento", fr: "Naissance", it: "Nascita", zh: "出生" };
-const LABEL_3W: Bilingual = { en: "3 weeks", es: "3 semanas", pt: "3 semanas", fr: "3 semaines", it: "3 settimane", zh: "3周" };
-const LABEL_4W: Bilingual = { en: "4 weeks", es: "4 semanas", pt: "4 semanas", fr: "4 semaines", it: "4 settimane", zh: "4周" };
-
 // Shared description phrases (identical meaning across mouse/rat rows, worded
 // consistently across languages even where the English source used a slightly
 // different abbreviation, e.g. "approx." vs "approximately").
@@ -128,36 +124,9 @@ const DESC = {
     it: "Palpebre aperte; apertura palpebrale a fessura.",
     zh: "眼睑张开；呈裂隙状睑裂。",
   } as Bilingual,
-  ovalOpening: {
-    en: "Oval palpebral opening; fine soft fur; tail irregular in shape.",
-    es: "Abertura palpebral ovalada; pelaje fino y suave; cola de forma irregular.",
-    pt: "Abertura palpebral oval; pelagem fina e macia; cauda de forma irregular.",
-    fr: "Ouverture palpébrale ovale ; pelage fin et doux ; queue de forme irrégulière.",
-    it: "Apertura palpebrale ovale; pelo fine e morbido; coda di forma irregolare.",
-    zh: "睑裂呈椭圆形；被毛细软；尾巴形状不规则。",
-  } as Bilingual,
-  roundOpening: {
-    en: "Round palpebral opening; smooth fur; head trapezoidal in shape.",
-    es: "Abertura palpebral redonda; pelaje suave; cabeza de forma trapezoidal.",
-    pt: "Abertura palpebral redonda; pelagem lisa; cabeça de forma trapezoidal.",
-    fr: "Ouverture palpébrale ronde ; pelage lisse ; tête de forme trapézoïdale.",
-    it: "Apertura palpebrale rotonda; pelo liscio; testa di forma trapezoidale.",
-    zh: "睑裂呈圆形；被毛光滑；头部呈梯形。",
-  } as Bilingual,
 };
 
-// Birth, 3-week and 4-week photos are supplementary reference images supplied
-// separately (the original chart only photographed Days 1-14).
 export const mouseAging: AgingStage[] = [
-  {
-    id: "mouse-birth",
-    species: "mouse",
-    order: 0,
-    day: null,
-    label: LABEL_BIRTH,
-    description: DESC.bloodRed,
-    image: "/images/reference/aging/mouse/birth.jpg",
-  },
   { id: "mouse-day-01", species: "mouse", order: 1, day: 1, label: dayLabel(1), description: DESC.lighterRedMilk, image: mouseImg(1) },
   { id: "mouse-day-02", species: "mouse", order: 2, day: 2, label: dayLabel(2), description: DESC.lighterEarsFlat, image: mouseImg(2) },
   { id: "mouse-day-03", species: "mouse", order: 3, day: 3, label: dayLabel(3), description: DESC.ears45, image: mouseImg(3) },
@@ -173,24 +142,6 @@ export const mouseAging: AgingStage[] = [
   { id: "mouse-day-12", species: "mouse", order: 12, day: 12, label: dayLabel(12), image: mouseImg(12) },
   { id: "mouse-day-13", species: "mouse", order: 13, day: 13, label: dayLabel(13), description: DESC.eyelidsOpenSlit, image: mouseImg(13) },
   { id: "mouse-day-14", species: "mouse", order: 14, day: 14, label: dayLabel(14), description: DESC.eyelidsOpenSlit, image: mouseImg(14) },
-  {
-    id: "mouse-3-weeks",
-    species: "mouse",
-    order: 15,
-    day: null,
-    label: LABEL_3W,
-    description: DESC.ovalOpening,
-    image: "/images/reference/aging/mouse/3-weeks.jpg",
-  },
-  {
-    id: "mouse-4-weeks",
-    species: "mouse",
-    order: 16,
-    day: null,
-    label: LABEL_4W,
-    description: DESC.roundOpening,
-    image: "/images/reference/aging/mouse/4-weeks.jpg",
-  },
 ];
 
 export const ratAging: AgingStage[] = [
