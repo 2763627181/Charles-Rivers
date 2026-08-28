@@ -132,7 +132,7 @@ export const es: Dictionary = {
     handbookAuthors:
       "Kathleen R. Pritchett-Corning, Aurelie Girod, Gloria Avellaneda, Patricia E. Fritz, Sonja Chou, Marilyn J. Brown",
     handbookCta: "Ver Manual",
-    handbookUnavailable: "Se requiere la fuente del documento.",
+    handbookUnavailable: "Se abre en SharePoint de Charles River — requiere iniciar sesión.",
     signsCount: "signos clínicos",
   },
   sexing: {

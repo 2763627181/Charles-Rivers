@@ -127,7 +127,7 @@ export const zh: Dictionary = {
     handbookAuthors:
       "Kathleen R. Pritchett-Corning, Aurelie Girod, Gloria Avellaneda, Patricia E. Fritz, Sonja Chou, Marilyn J. Brown",
     handbookCta: "查看手册",
-    handbookUnavailable: "需要提供文档来源。",
+    handbookUnavailable: "在 Charles River SharePoint 中打开——需要登录。",
     signsCount: "项临床体征",
   },
   sexing: {

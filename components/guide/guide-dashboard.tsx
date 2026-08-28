@@ -23,7 +23,7 @@ export function GuideDashboard({ locale, dictionary }: { locale: Locale; diction
       icon: Palette,
       title: dictionary.cards.coatColors.title,
       description: dictionary.cards.coatColors.description,
-      image: "/images/reference/coat-colors/chimera.png",
+      image: "/images/reference/coat-colors/coat-colors-collage.jpg",
     },
     {
       index: "03",

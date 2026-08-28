@@ -5,6 +5,9 @@ import { HealthDisclaimer } from "@/components/guide/health-disclaimer";
 import { Button } from "@/components/ui/button";
 import type { Dictionary } from "@/types/dictionary";
 
+const HANDBOOK_URL =
+  "https://charlesriverlabs.sharepoint.com/sites/ResearchModelsandServicesHub/Biosecurity/Forms/AllItems.aspx?id=%2Fsites%2FResearchModelsandServicesHub%2FBiosecurity%2FHandbook%2FRM%2DClinical%2DSigns%2DRodents%2DRabbits%2DHandbook%2DEng%2Epdf&parent=%2Fsites%2FResearchModelsandServicesHub%2FBiosecurity%2FHandbook";
+
 export function HandbookContent({ dictionary }: { dictionary: Dictionary }) {
   return (
     <div className="flex flex-col gap-6">
@@ -35,9 +38,11 @@ export function HandbookContent({ dictionary }: { dictionary: Dictionary }) {
             <span>{dictionary.health.handbookAuthors}</span>
           </div>
           <div className="flex flex-wrap items-center gap-3">
-            <Button disabled className="gap-2 bg-muted text-muted-foreground shadow-none hover:bg-muted">
-              <BookOpen className="size-4" />
-              {dictionary.health.handbookCta}
+            <Button asChild className="gap-2 bg-corporate-blue text-white shadow-none hover:bg-medium-blue">
+              <a href={HANDBOOK_URL} target="_blank" rel="noopener noreferrer">
+                <BookOpen className="size-4" />
+                {dictionary.health.handbookCta}
+              </a>
             </Button>
             <span className="text-xs font-medium text-muted-foreground">{dictionary.health.handbookUnavailable}</span>
           </div>
