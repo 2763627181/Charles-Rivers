@@ -14,7 +14,7 @@ export function GuideDashboard({ locale, dictionary }: { locale: Locale; diction
       icon: CalendarClock,
       title: dictionary.cards.aging.title,
       description: dictionary.cards.aging.description,
-      image: "/images/reference/aging/mouse/day-10.jpg",
+      image: "/images/reference/aging/mouse/day-07.jpg",
     },
     {
       index: "02",
@@ -46,7 +46,7 @@ export function GuideDashboard({ locale, dictionary }: { locale: Locale; diction
       icon: Users,
       title: dictionary.cards.sexing.title,
       description: dictionary.cards.sexing.description,
-      image: "/images/reference/sexing/mouse-male-closeup.jpg",
+      image: "/images/reference/sexing/mouse-pair-photo.jpg",
     },
   ];
 
