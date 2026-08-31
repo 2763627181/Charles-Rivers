@@ -28,7 +28,7 @@ export function AgingCard({ stage, delay = 0 }: { stage: AgingStage; delay?: num
         )}
       >
         {stage.image && (
-          <div className="relative aspect-square w-full overflow-hidden bg-muted">
+          <div className="relative aspect-4/3 w-full overflow-hidden bg-muted">
             <ParallaxImage className="absolute inset-0">
               <Image
                 src={stage.image}

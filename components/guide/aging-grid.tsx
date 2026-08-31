@@ -56,7 +56,7 @@ export function AgingGrid({ stages }: { stages: AgingStage[] }) {
             <li key={stage.id} className="relative">
               <span className="absolute top-1 -left-[31px] size-3 rounded-full border-2 border-white bg-corporate-blue sm:-left-[39px]" />
               <div className="flex flex-col gap-3 rounded-xl border border-border bg-white p-4 shadow-sm sm:flex-row sm:items-center">
-                <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-muted">
+                <div className="relative h-20 w-28 shrink-0 overflow-hidden rounded-lg bg-muted">
                   {stage.image ? (
                     <Image src={stage.image} alt={stage.label[locale]} fill sizes="80px" className="object-cover" />
                   ) : (

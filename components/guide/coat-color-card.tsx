@@ -40,6 +40,7 @@ export function CoatColorCard({ color }: { color: CoatColor }) {
               alt={color.name}
               fill
               sizes="(min-width: 1280px) 22vw, (min-width: 640px) 30vw, 90vw"
+              style={{ objectPosition: color.imagePosition ?? "50% 50%" }}
               className="object-cover transition-transform duration-300 group-hover:scale-110"
             />
           </ParallaxImage>

@@ -4,16 +4,17 @@ import type { CoatColor } from "@/types/coat-colors";
 const img = (name: string) => `/images/reference/coat-colors/${name}.png`;
 
 export const coatColors: CoatColor[] = [
-  { id: "black", name: "Black", species: ["mouse", "rat"], image: img("black") },
+  { id: "black", name: "Black", species: ["mouse", "rat"], image: img("black"), imagePosition: "37% 50%" },
   {
     id: "agouti",
     name: "Agouti",
     species: ["mouse", "rat"],
     note: { en: "Many colors", es: "Varios colores", pt: "Várias cores", fr: "Plusieurs couleurs", it: "Molti colori", zh: "多种颜色" },
     image: img("agouti"),
+    imagePosition: "58% 50%",
   },
-  { id: "nude", name: "Nude", species: ["mouse", "rat"], image: img("nude") },
-  { id: "chimera", name: "Chimera", species: ["mouse", "rat"], image: img("chimera") },
+  { id: "nude", name: "Nude", species: ["mouse", "rat"], image: img("nude"), imagePosition: "61% 50%" },
+  { id: "chimera", name: "Chimera", species: ["mouse", "rat"], image: img("chimera"), imagePosition: "44% 50%" },
   { id: "grey", name: "Grey", species: ["mouse", "rat"], image: img("grey") },
   {
     id: "albino",
@@ -21,6 +22,7 @@ export const coatColors: CoatColor[] = [
     species: ["mouse", "rat"],
     note: { en: "Red eyes", es: "Ojos rojos", pt: "Olhos vermelhos", fr: "Yeux rouges", it: "Occhi rossi", zh: "红眼" },
     image: img("albino"),
+    imagePosition: "44% 50%",
   },
   {
     id: "hooded",
@@ -35,6 +37,7 @@ export const coatColors: CoatColor[] = [
     species: ["mouse", "rat"],
     note: { en: "Black eyes", es: "Ojos negros", pt: "Olhos pretos", fr: "Yeux noirs", it: "Occhi neri", zh: "黑眼" },
     image: img("white"),
+    imagePosition: "62% 50%",
   },
   {
     id: "fawn",
@@ -49,6 +52,7 @@ export const coatColors: CoatColor[] = [
       zh: "浅黄色；红眼",
     },
     image: img("fawn"),
+    imagePosition: "39% 50%",
   },
   {
     id: "brown",
