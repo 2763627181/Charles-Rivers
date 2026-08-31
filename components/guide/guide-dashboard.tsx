@@ -30,7 +30,7 @@ export function GuideDashboard({ locale, dictionary }: { locale: Locale; diction
       icon: ScanLine,
       title: dictionary.cards.earId.title,
       description: dictionary.cards.earId.description,
-      image: "/images/reference/ear-id/mark-correct.jpg",
+      image: "/images/reference/ear-id/chart-1-16.jpg",
     },
     {
       index: "04",
@@ -38,7 +38,7 @@ export function GuideDashboard({ locale, dictionary }: { locale: Locale; diction
       icon: Stethoscope,
       title: dictionary.cards.health.title,
       description: dictionary.cards.health.description,
-      image: "/images/reference/health/eyes/cataract.jpg",
+      image: "/images/reference/health/health-issues-card.jpg",
     },
     {
       index: "05",

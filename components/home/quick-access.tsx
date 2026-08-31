@@ -37,7 +37,7 @@ export function QuickAccess() {
       icon: Stethoscope,
       title: dictionary.cards.health.title,
       description: dictionary.cards.health.description,
-      image: "/images/reference/health/neurological/ataxia.jpg",
+      image: "/images/reference/health/health-issues-card.jpg",
     },
     {
       href: `${base}/sexing`,
