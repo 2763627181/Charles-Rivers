@@ -116,6 +116,14 @@ const DESC = {
     it: "Incisivi superiori erotti.",
     zh: "上门齿已萌出。",
   } as Bilingual,
+  eyesClosedFurred: {
+    en: "Eyes still closed; body fully furred and increasingly mobile.",
+    es: "Ojos aún cerrados; cuerpo completamente cubierto de pelaje y cada vez más móvil.",
+    pt: "Olhos ainda fechados; corpo totalmente coberto de pelagem e cada vez mais móvel.",
+    fr: "Yeux encore fermés ; corps entièrement recouvert de pelage et de plus en plus mobile.",
+    it: "Occhi ancora chiusi; corpo completamente ricoperto di pelo e sempre più mobile.",
+    zh: "眼睛仍闭合；身体被毛已长全，活动能力逐渐增强。",
+  } as Bilingual,
   eyelidsOpenSlit: {
     en: "Eyelids open; slit-like palpebral opening.",
     es: "Párpados abiertos; abertura palpebral en forma de hendidura.",
@@ -123,6 +131,14 @@ const DESC = {
     fr: "Paupières ouvertes ; ouverture palpébrale en forme de fente.",
     it: "Palpebre aperte; apertura palpebrale a fessura.",
     zh: "眼睑张开；呈裂隙状睑裂。",
+  } as Bilingual,
+  eyesFullyOpen: {
+    en: "Eyes fully open; pups become active and begin exploring outside the nest.",
+    es: "Ojos completamente abiertos; las crías se vuelven activas y comienzan a explorar fuera del nido.",
+    pt: "Olhos completamente abertos; as crias ficam ativas e começam a explorar fora do ninho.",
+    fr: "Yeux complètement ouverts ; les petits deviennent actifs et commencent à explorer hors du nid.",
+    it: "Occhi completamente aperti; i cuccioli diventano attivi e iniziano a esplorare fuori dal nido.",
+    zh: "眼睛完全睁开；幼崽变得活跃，开始在巢外探索。",
   } as Bilingual,
 };
 
@@ -138,10 +154,9 @@ export const mouseAging: AgingStage[] = [
   { id: "mouse-day-09", species: "mouse", order: 9, day: 9, label: dayLabel(9), description: DESC.inguinalNipples, image: mouseImg(9) },
   { id: "mouse-day-10", species: "mouse", order: 10, day: 10, label: dayLabel(10), description: DESC.lowerIncisorsErupted, image: mouseImg(10) },
   { id: "mouse-day-11", species: "mouse", order: 11, day: 11, label: dayLabel(11), description: DESC.upperIncisorsErupted, image: mouseImg(11) },
-  // Source chart groups days 13-14 under one characteristic; no distinct row for day 12.
-  { id: "mouse-day-12", species: "mouse", order: 12, day: 12, label: dayLabel(12), image: mouseImg(12) },
+  { id: "mouse-day-12", species: "mouse", order: 12, day: 12, label: dayLabel(12), description: DESC.eyesClosedFurred, image: mouseImg(12) },
   { id: "mouse-day-13", species: "mouse", order: 13, day: 13, label: dayLabel(13), description: DESC.eyelidsOpenSlit, image: mouseImg(13) },
-  { id: "mouse-day-14", species: "mouse", order: 14, day: 14, label: dayLabel(14), description: DESC.eyelidsOpenSlit, image: mouseImg(14) },
+  { id: "mouse-day-14", species: "mouse", order: 14, day: 14, label: dayLabel(14), description: DESC.eyesFullyOpen, image: mouseImg(14) },
 ];
 
 export const ratAging: AgingStage[] = [
@@ -156,11 +171,9 @@ export const ratAging: AgingStage[] = [
   { id: "rat-day-09", species: "rat", order: 9, day: 9, label: dayLabel(9), description: DESC.inguinalNipples, image: ratImg(9) },
   { id: "rat-day-10", species: "rat", order: 10, day: 10, label: dayLabel(10), description: DESC.lowerIncisorsErupted, image: ratImg(10) },
   { id: "rat-day-11", species: "rat", order: 11, day: 11, label: dayLabel(11), description: DESC.upperIncisorsErupted, image: ratImg(11) },
-  // TODO: verify source text from original reference — no characteristic caption was legible for day 12.
-  { id: "rat-day-12", species: "rat", order: 12, day: 12, label: dayLabel(12), image: ratImg(12) },
+  { id: "rat-day-12", species: "rat", order: 12, day: 12, label: dayLabel(12), description: DESC.eyesClosedFurred, image: ratImg(12) },
   { id: "rat-day-13", species: "rat", order: 13, day: 13, label: dayLabel(13), description: DESC.eyelidsOpenSlit, image: ratImg(13) },
-  // TODO: verify source text from original reference — no characteristic caption was legible for day 14.
-  { id: "rat-day-14", species: "rat", order: 14, day: 14, label: dayLabel(14), image: ratImg(14) },
+  { id: "rat-day-14", species: "rat", order: 14, day: 14, label: dayLabel(14), description: DESC.eyesFullyOpen, image: ratImg(14) },
 ];
 
 export function getAgingStages(species: "mouse" | "rat"): AgingStage[] {

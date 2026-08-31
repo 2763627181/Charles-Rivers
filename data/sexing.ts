@@ -24,12 +24,12 @@ export const mouseSexingExamples: SexingExample[] = [
     sex: "both",
     image: img("mouse-pair-photo"),
     caption: {
-      en: "Male and female pups, side by side.",
-      es: "Crías macho y hembra, lado a lado.",
-      pt: "Crias macho e fêmea, lado a lado.",
-      fr: "Petits mâle et femelle, côte à côte.",
-      it: "Cuccioli maschio e femmina, fianco a fianco.",
-      zh: "雄性和雌性幼崽并排对比。",
+      en: "Male and female mice, side by side.",
+      es: "Ratones macho y hembra, lado a lado.",
+      pt: "Camundongos macho e fêmea, lado a lado.",
+      fr: "Souris mâle et femelle, côte à côte.",
+      it: "Topi maschio e femmina, fianco a fianco.",
+      zh: "雄性和雌性小鼠并排对比。",
     },
   },
   {
