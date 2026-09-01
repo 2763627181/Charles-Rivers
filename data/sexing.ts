@@ -47,10 +47,3 @@ export const mouseSexingExamples: SexingExample[] = [
     caption: { en: "Female", es: "Hembra", pt: "Fêmea", fr: "Femelle", it: "Femmina", zh: "雌性" },
   },
 ];
-
-// No rat sexing photographs were included in the original reference material.
-export const ratSexingExamples: SexingExample[] = [];
-
-export function getSexingExamples(species: "mouse" | "rat"): SexingExample[] {
-  return species === "mouse" ? mouseSexingExamples : ratSexingExamples;
-}
