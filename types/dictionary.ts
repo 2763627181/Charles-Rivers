@@ -9,6 +9,7 @@ export interface Dictionary {
     earId: string;
     health: string;
     sexing: string;
+    handling: string;
     menu: string;
     backToGuide: string;
     identificationGroup: string;
@@ -32,6 +33,7 @@ export interface Dictionary {
     earId: { title: string; description: string };
     health: { title: string; description: string };
     sexing: { title: string; description: string };
+    handling: { title: string; description: string };
   };
   guideDashboard: {
     badge: string;
@@ -115,6 +117,13 @@ export interface Dictionary {
     testesDesc: string;
     nipples: string;
     nipplesDesc: string;
+  };
+  handling: {
+    title: string;
+    subtitle: string;
+    basicsTitle: string;
+    distressTitle: string;
+    stepsLabel: string;
   };
   search: {
     placeholder: string;

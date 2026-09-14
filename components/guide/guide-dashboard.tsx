@@ -1,4 +1,4 @@
-import { CalendarClock, Palette, ScanLine, Stethoscope, Users } from "lucide-react";
+import { CalendarClock, Palette, ScanLine, Stethoscope, Users, Hand } from "lucide-react";
 import { SectionHeader } from "@/components/guide/section-header";
 import { GuideCard } from "@/components/guide/guide-card";
 import type { Locale } from "@/lib/i18n";
@@ -47,6 +47,14 @@ export function GuideDashboard({ locale, dictionary }: { locale: Locale; diction
       title: dictionary.cards.sexing.title,
       description: dictionary.cards.sexing.description,
       image: "/images/reference/sexing/mouse-pair-photo.jpg",
+    },
+    {
+      index: "06",
+      href: `${base}/handling`,
+      icon: Hand,
+      title: dictionary.cards.handling.title,
+      description: dictionary.cards.handling.description,
+      image: "/images/reference/handling/scruff-mouse.jpg",
     },
   ];
 

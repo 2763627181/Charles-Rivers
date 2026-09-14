@@ -11,6 +11,7 @@ export const es: Dictionary = {
     earId: "ID Oreja",
     health: "Salud",
     sexing: "Sexado",
+    handling: "Manejo",
     menu: "Menú",
     backToGuide: "Volver a la Guía",
     identificationGroup: "Identificación",
@@ -49,6 +50,10 @@ export const es: Dictionary = {
     sexing: {
       title: "Sexado",
       description: "Distingue crías macho y hembra utilizando diferencias anatómicas como la distancia anogenital.",
+    },
+    handling: {
+      title: "Manejo",
+      description: "Técnicas de bajo estrés para inmovilizar y trasladar ratones y ratas.",
     },
   },
   guideDashboard: {
@@ -144,6 +149,13 @@ export const es: Dictionary = {
     testesDesc: "En los machos, los testículos pueden ser visibles o palpables en el área escrotal a medida que maduran.",
     nipples: "Pezones",
     nipplesDesc: "Los pezones inguinales son visibles en las hembras y no están presentes en los machos.",
+  },
+  handling: {
+    title: "Manejo de bajo estrés",
+    subtitle: "Técnicas para manipular, inmovilizar y trasladar ratones y ratas con el mínimo estrés posible.",
+    basicsTitle: "Fundamentos del manejo de bajo estrés",
+    distressTitle: "Signos de angustia — suelte al animal de inmediato",
+    stepsLabel: "Pasos",
   },
   search: {
     placeholder: "Buscar en la guía de laboratorio...",

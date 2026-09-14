@@ -11,6 +11,7 @@ export const it: Dictionary = {
     earId: "ID Orecchio",
     health: "Salute",
     sexing: "Sessaggio",
+    handling: "Manipolazione",
     menu: "Menu",
     backToGuide: "Torna alla Guida",
     identificationGroup: "Identificazione",
@@ -49,6 +50,10 @@ export const it: Dictionary = {
     sexing: {
       title: "Sessaggio",
       description: "Distingui i cuccioli maschi e femmine usando differenze anatomiche come la distanza anogenitale.",
+    },
+    handling: {
+      title: "Manipolazione",
+      description: "Tecniche a basso stress per contenere e trasferire topi e ratti.",
     },
   },
   guideDashboard: {
@@ -144,6 +149,13 @@ export const it: Dictionary = {
     testesDesc: "Nei maschi, i testicoli possono diventare visibili o palpabili nell'area scrotale man mano che gli animali maturano.",
     nipples: "Capezzoli",
     nipplesDesc: "I capezzoli inguinali sono visibili nelle femmine e non sono presenti nei maschi.",
+  },
+  handling: {
+    title: "Manipolazione a Basso Stress",
+    subtitle: "Tecniche per maneggiare, contenere e trasferire topi e ratti riducendo al minimo lo stress.",
+    basicsTitle: "Principi di Base della Manipolazione a Basso Stress",
+    distressTitle: "Segni di sofferenza — rilasciare immediatamente l'animale",
+    stepsLabel: "Passaggi",
   },
   search: {
     placeholder: "Cerca nella guida di laboratorio...",

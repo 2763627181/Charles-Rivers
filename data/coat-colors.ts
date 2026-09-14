@@ -9,7 +9,6 @@ export const coatColors: CoatColor[] = [
     id: "agouti",
     name: "Agouti",
     species: ["mouse", "rat"],
-    note: { en: "Many colors", es: "Varios colores", pt: "Várias cores", fr: "Plusieurs couleurs", it: "Molti colori", zh: "多种颜色" },
     image: img("agouti"),
     imagePosition: "58% 50%",
   },
@@ -58,7 +57,6 @@ export const coatColors: CoatColor[] = [
     id: "brown",
     name: "Brown",
     species: ["mouse", "rat"],
-    note: { en: "Only brown", es: "Solo marrón", pt: "Apenas castanho", fr: "Marron uniquement", it: "Solo marrone", zh: "仅棕色" },
     image: img("brown"),
   },
 ];

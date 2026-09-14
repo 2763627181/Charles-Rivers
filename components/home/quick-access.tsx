@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarClock, Palette, ScanLine, Stethoscope, Users } from "lucide-react";
+import { CalendarClock, Palette, ScanLine, Stethoscope, Users, Hand } from "lucide-react";
 import { useDictionary, useLocale } from "@/lib/context/locale-context";
 import { GuideCard } from "@/components/guide/guide-card";
 import { SectionHeader } from "@/components/guide/section-header";
@@ -46,12 +46,19 @@ export function QuickAccess() {
       description: dictionary.cards.sexing.description,
       image: "/images/reference/sexing/mouse-pair-photo.jpg",
     },
+    {
+      href: `${base}/handling`,
+      icon: Hand,
+      title: dictionary.cards.handling.title,
+      description: dictionary.cards.handling.description,
+      image: "/images/reference/handling/scruff-mouse.jpg",
+    },
   ];
 
   return (
     <section className="mx-auto max-w-[1440px] px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
       <SectionHeader title={dictionary.home.quickAccess} description={dictionary.home.quickAccessSubtitle} />
-      <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
+      <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
         {items.map((item, i) => (
           <GuideCard key={item.href} {...item} cta={dictionary.common.explore} delay={i * 0.05} />
         ))}

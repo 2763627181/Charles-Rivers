@@ -11,6 +11,7 @@ export const pt: Dictionary = {
     earId: "ID da Orelha",
     health: "Saúde",
     sexing: "Sexagem",
+    handling: "Manejo",
     menu: "Menu",
     backToGuide: "Voltar ao Guia",
     identificationGroup: "Identificação",
@@ -49,6 +50,10 @@ export const pt: Dictionary = {
     sexing: {
       title: "Sexagem",
       description: "Distinga crias macho e fêmea usando diferenças anatômicas, como a distância anogenital.",
+    },
+    handling: {
+      title: "Manejo",
+      description: "Técnicas de baixo estresse para conter e transferir camundongos e ratos.",
     },
   },
   guideDashboard: {
@@ -144,6 +149,13 @@ export const pt: Dictionary = {
     testesDesc: "Nos machos, os testículos podem ficar visíveis ou palpáveis na região escrotal à medida que os animais amadurecem.",
     nipples: "Mamilos",
     nipplesDesc: "Os mamilos inguinais são visíveis nas fêmeas e não estão presentes nos machos.",
+  },
+  handling: {
+    title: "Manejo de Baixo Estresse",
+    subtitle: "Técnicas para manusear, conter e transferir camundongos e ratos com o mínimo de estresse possível.",
+    basicsTitle: "Fundamentos do Manejo de Baixo Estresse",
+    distressTitle: "Sinais de sofrimento — solte o animal imediatamente",
+    stepsLabel: "Passos",
   },
   search: {
     placeholder: "Pesquisar no guia de laboratório...",

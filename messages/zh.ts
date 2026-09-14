@@ -11,6 +11,7 @@ export const zh: Dictionary = {
     earId: "耳标识别",
     health: "健康",
     sexing: "性别鉴定",
+    handling: "抓取操作",
     menu: "菜单",
     backToGuide: "返回指南",
     identificationGroup: "识别",
@@ -48,6 +49,10 @@ export const zh: Dictionary = {
     sexing: {
       title: "性别鉴定",
       description: "利用肛殖距等解剖学差异区分雄性和雌性幼崽。",
+    },
+    handling: {
+      title: "抓取操作",
+      description: "用于保定和转移小鼠及大鼠的低应激技术。",
     },
   },
   guideDashboard: {
@@ -138,6 +143,13 @@ export const zh: Dictionary = {
     testesDesc: "随着动物发育成熟，雄性的睾丸可能在阴囊区域可见或可触及。",
     nipples: "乳头",
     nipplesDesc: "腹股沟乳头在雌性中可见，雄性中不存在。",
+  },
+  handling: {
+    title: "低应激处理",
+    subtitle: "以最小应激轻柔处理、保定和转移小鼠及大鼠的技术。",
+    basicsTitle: "低应激处理基础",
+    distressTitle: "痛苦迹象——请立即释放动物",
+    stepsLabel: "步骤",
   },
   search: {
     placeholder: "搜索实验室指南...",

@@ -634,7 +634,7 @@ export const clinicalSigns: ClinicalSign[] = [
   },
   {
     id: "lameness",
-    category: "repro-digest",
+    category: "head-body",
     name: { en: "Lameness", es: "Cojera", pt: "Claudicação", fr: "Boiterie", it: "Zoppia", zh: "跛行" },
     subtitle: {
       en: "abnormal gait",

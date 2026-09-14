@@ -7,6 +7,7 @@ export const primaryNav: NavLink[] = [
   { href: "/guide/ear-identification", labelKey: "earId", icon: "ScanLine" },
   { href: "/guide/health", labelKey: "health", icon: "Stethoscope" },
   { href: "/guide/sexing", labelKey: "sexing", icon: "Users" },
+  { href: "/guide/handling", labelKey: "handling", icon: "Hand" },
 ];
 
 export const healthCategoryNav: HealthCategoryLink[] = [

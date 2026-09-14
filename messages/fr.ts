@@ -11,6 +11,7 @@ export const fr: Dictionary = {
     earId: "ID Oreille",
     health: "Santé",
     sexing: "Sexage",
+    handling: "Manipulation",
     menu: "Menu",
     backToGuide: "Retour au guide",
     identificationGroup: "Identification",
@@ -49,6 +50,10 @@ export const fr: Dictionary = {
     sexing: {
       title: "Sexage",
       description: "Distinguer les petits mâles et femelles à l'aide de différences anatomiques telles que la distance anogénitale.",
+    },
+    handling: {
+      title: "Manipulation",
+      description: "Techniques à faible stress pour immobiliser et transférer souris et rats.",
     },
   },
   guideDashboard: {
@@ -144,6 +149,13 @@ export const fr: Dictionary = {
     testesDesc: "Chez les mâles, les testicules peuvent être visibles ou palpables dans la zone scrotale à mesure que les animaux mûrissent.",
     nipples: "Mamelons",
     nipplesDesc: "Les mamelons inguinaux sont visibles chez les femelles et absents chez les mâles.",
+  },
+  handling: {
+    title: "Manipulation à faible stress",
+    subtitle: "Techniques pour manipuler, immobiliser et transférer les souris et les rats avec un minimum de stress.",
+    basicsTitle: "Principes de base de la manipulation à faible stress",
+    distressTitle: "Signes de détresse — relâchez l'animal immédiatement",
+    stepsLabel: "Étapes",
   },
   search: {
     placeholder: "Rechercher dans le guide de laboratoire...",

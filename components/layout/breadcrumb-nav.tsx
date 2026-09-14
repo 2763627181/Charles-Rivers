@@ -22,6 +22,7 @@ function resolveLabel(segment: string, dictionary: Dictionary): string {
     "ear-identification": dictionary.nav.earId,
     health: dictionary.nav.health,
     sexing: dictionary.nav.sexing,
+    handling: dictionary.nav.handling,
     "head-body": dictionary.health.categories.headBody,
     eyes: dictionary.health.categories.eyes,
     "repro-digest": dictionary.health.categories.reproDigest,

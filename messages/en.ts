@@ -11,6 +11,7 @@ export const en: Dictionary = {
     earId: "Ear ID",
     health: "Health",
     sexing: "Sexing",
+    handling: "Handling",
     menu: "Menu",
     backToGuide: "Back to Guide",
     identificationGroup: "Identification",
@@ -49,6 +50,10 @@ export const en: Dictionary = {
     sexing: {
       title: "Sexing",
       description: "Distinguish male and female pups using anatomical differences such as anogenital distance.",
+    },
+    handling: {
+      title: "Handling",
+      description: "Low-stress techniques for restraining and transferring mice and rats.",
     },
   },
   guideDashboard: {
@@ -144,6 +149,13 @@ export const en: Dictionary = {
     testesDesc: "In males, testes may be visible or palpable within the scrotal area as animals mature.",
     nipples: "Nipples",
     nipplesDesc: "Inguinal nipples are visible in females and are not present in males.",
+  },
+  handling: {
+    title: "Low Stress Handling",
+    subtitle: "Techniques to gently handle, restrain and transfer mice and rats with minimal stress.",
+    basicsTitle: "Basics of Low Stress Handling",
+    distressTitle: "Signs of distress — release the animal immediately",
+    stepsLabel: "Steps",
   },
   search: {
     placeholder: "Search the laboratory guide...",
