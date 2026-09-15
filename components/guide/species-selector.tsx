@@ -19,7 +19,7 @@ export function SpeciesSelector({
     <div
       role="tablist"
       aria-label="Species"
-      className="relative inline-flex rounded-full border border-border bg-white p-1 shadow-sm"
+      className="relative inline-flex self-start rounded-full border border-border bg-white p-1 shadow-sm"
     >
       <span
         aria-hidden="true"
