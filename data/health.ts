@@ -312,6 +312,28 @@ export const clinicalSigns: ClinicalSign[] = [
     },
     images: [img("head-body", "abscess-1"), img("head-body", "abscess-2")],
   },
+  {
+    id: "lameness",
+    category: "head-body",
+    name: { en: "Lameness", es: "Cojera", pt: "Claudicação", fr: "Boiterie", it: "Zoppia", zh: "跛行" },
+    subtitle: {
+      en: "abnormal gait",
+      es: "marcha anormal",
+      pt: "marcha anormal",
+      fr: "démarche anormale",
+      it: "andatura anomala",
+      zh: "步态异常",
+    },
+    description: {
+      en: "A clinical sign of injury to one or more limb(s), indicating pain. The condition may occur secondary to trauma, tumor or wound contraction.",
+      es: "Un signo clínico de lesión en una o más extremidades, que indica dolor. La afección puede ocurrir secundariamente a un traumatismo, un tumor o la contracción de una herida.",
+      pt: "Um sinal clínico de lesão em um ou mais membros, indicando dor. A condição pode ocorrer secundariamente a trauma, tumor ou contração de ferida.",
+      fr: "Un signe clinique de blessure à un ou plusieurs membres, indiquant une douleur. Cette condition peut survenir secondairement à un traumatisme, une tumeur ou la contraction d'une plaie.",
+      it: "Un segno clinico di lesione a uno o più arti, indicativo di dolore. La condizione può verificarsi secondariamente a trauma, tumore o contrazione di una ferita.",
+      zh: "一个或多个肢体损伤的临床体征，提示疼痛。该情况可继发于创伤、肿瘤或伤口收缩。",
+    },
+    images: [img("head-body", "lameness")],
+  },
 
   // ---------------- EYES ----------------
   {
@@ -631,28 +653,6 @@ export const clinicalSigns: ClinicalSign[] = [
       zh: "会阴（肛殖区）被毛染色/发黄，继发于部分尿路阻塞/尿失禁或动物存在活动障碍。",
     },
     images: [img("repro-digest", "urine-staining-1"), img("repro-digest", "urine-staining-2")],
-  },
-  {
-    id: "lameness",
-    category: "head-body",
-    name: { en: "Lameness", es: "Cojera", pt: "Claudicação", fr: "Boiterie", it: "Zoppia", zh: "跛行" },
-    subtitle: {
-      en: "abnormal gait",
-      es: "marcha anormal",
-      pt: "marcha anormal",
-      fr: "démarche anormale",
-      it: "andatura anomala",
-      zh: "步态异常",
-    },
-    description: {
-      en: "A clinical sign of injury to one or more limb(s), indicating pain. The condition may occur secondary to trauma, tumor or wound contraction.",
-      es: "Un signo clínico de lesión en una o más extremidades, que indica dolor. La afección puede ocurrir secundariamente a un traumatismo, un tumor o la contracción de una herida.",
-      pt: "Um sinal clínico de lesão em um ou mais membros, indicando dor. A condição pode ocorrer secundariamente a trauma, tumor ou contração de ferida.",
-      fr: "Un signe clinique de blessure à un ou plusieurs membres, indiquant une douleur. Cette condition peut survenir secondairement à un traumatisme, une tumeur ou la contraction d'une plaie.",
-      it: "Un segno clinico di lesione a uno o più arti, indicativo di dolore. La condizione può verificarsi secondariamente a trauma, tumore o contrazione di una ferita.",
-      zh: "一个或多个肢体损伤的临床体征，提示疼痛。该情况可继发于创伤、肿瘤或伤口收缩。",
-    },
-    images: [img("repro-digest", "lameness")],
   },
   {
     id: "hydrocephalus",
